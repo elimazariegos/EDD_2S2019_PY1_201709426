@@ -23,6 +23,8 @@ public:
     
     Capa();
     bool esta_vacia();
+    Nodo_Capa* exist_fila(int y);
+    Nodo_Capa* exist_columna(int x);
 private:
 
 };
