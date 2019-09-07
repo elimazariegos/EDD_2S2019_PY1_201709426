@@ -36,7 +36,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Capa.o \
+	${OBJECTDIR}/Cubo.o \
 	${OBJECTDIR}/Nodo_Capa.o \
+	${OBJECTDIR}/Nodo_Cubo.o \
 	${OBJECTDIR}/main.o
 
 
@@ -69,10 +71,20 @@ ${OBJECTDIR}/Capa.o: Capa.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Capa.o Capa.cpp
 
+${OBJECTDIR}/Cubo.o: Cubo.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cubo.o Cubo.cpp
+
 ${OBJECTDIR}/Nodo_Capa.o: Nodo_Capa.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo_Capa.o Nodo_Capa.cpp
+
+${OBJECTDIR}/Nodo_Cubo.o: Nodo_Cubo.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo_Cubo.o Nodo_Cubo.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

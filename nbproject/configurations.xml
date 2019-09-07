@@ -5,7 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Capa.h</itemPath>
+      <itemPath>Cubo.h</itemPath>
       <itemPath>Nodo_Capa.h</itemPath>
+      <itemPath>Nodo_Cubo.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -15,7 +17,9 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Capa.cpp</itemPath>
+      <itemPath>Cubo.cpp</itemPath>
       <itemPath>Nodo_Capa.cpp</itemPath>
+      <itemPath>Nodo_Cubo.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -44,9 +48,17 @@
       </item>
       <item path="Capa.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Cubo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cubo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Nodo_Capa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo_Capa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo_Cubo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Nodo_Cubo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -75,9 +87,17 @@
       </item>
       <item path="Capa.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Cubo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cubo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Nodo_Capa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo_Capa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo_Cubo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Nodo_Cubo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
