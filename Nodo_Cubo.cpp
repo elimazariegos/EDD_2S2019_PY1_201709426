@@ -10,4 +10,9 @@
 Nodo_Cubo::Nodo_Cubo() {
 }
 
+Nodo_Cubo::Nodo_Cubo(Capa* capa_) {
+    this->capa = capa_;
+}
+
+
 
