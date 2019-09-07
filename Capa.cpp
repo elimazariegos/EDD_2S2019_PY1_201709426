@@ -9,6 +9,16 @@
 
 Capa::Capa() {
 }
+
+Capa::Capa(string nombre_) {
+    cabecera = new Nodo_Capa();
+    cabecera->fila = cabecera->columna = 0;
+    cabecera->sig = cabecera->ant = cabecera->abajo = cabecera->arriba = 0;
+    max_columna = 0;
+    max_fila = 0;
+    nombre = nombre_;
+}
+
 bool Capa::esta_vacia(){return cabecera ==0;}
 
 Nodo_Capa* Capa::exist_fila(int y){
@@ -55,4 +65,53 @@ Nodo_Capa* Capa::crear_columna(int x) {
     }
     max_columna = x;
     return tmp;
+}
+void Capa::insertar_nodo(int y, int x, string color){
+    Nodo_Capa* nuevo = new Nodo_Capa(y, x, color);
+    Nodo_Capa* fila_b = exist_fila(y);
+    Nodo_Capa* columna_b = exist_columna(x);
+
+    if (fila_b == 0) { fila_b = crear_fila(y);}
+    if (columna_b == 0) { columna_b = crear_columna(x);}
+   
+    Nodo_Capa* tmp = fila_b;
+    
+    while (tmp != 0) {
+        if (tmp->columna > x) {
+            tmp = tmp->ant;
+            break;
+        } else {
+            if (tmp->sig == 0) {
+                break;
+            } else {
+                tmp = tmp->sig;
+            }
+        }
+    }
+    nuevo->ant = tmp;
+    nuevo->sig = tmp->sig;
+    if (tmp->sig != 0) {
+        tmp->sig->ant = nuevo;
+    }
+    tmp->sig = nuevo;
+    
+    tmp = columna_b;
+    while (tmp != 0) {
+        if (tmp->fila > y) {
+            tmp = tmp->arriba;
+            break;
+        } else {
+            if (tmp->abajo == 0) {
+                break;
+            } else {
+                tmp = tmp->abajo;
+            }
+        }
+    }
+    nuevo->arriba = tmp;
+    nuevo->abajo = tmp->abajo;
+    if (tmp->abajo != 0) {
+        tmp->abajo->arriba = nuevo;
+    }
+    tmp->abajo = nuevo;
 }
