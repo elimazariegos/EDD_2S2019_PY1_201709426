@@ -25,6 +25,8 @@ public:
     bool esta_vacia();
     Nodo_Capa* exist_fila(int y);
     Nodo_Capa* exist_columna(int x);
+    Nodo_Capa* crear_fila(int y);
+    Nodo_Capa* crear_columna(int x);    
 private:
 
 };
