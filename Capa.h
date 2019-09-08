@@ -29,6 +29,7 @@ public:
     Nodo_Capa* crear_fila(int y);
     Nodo_Capa* crear_columna(int x); 
     void insertar_nodo(int y, int x, string color);
+    void imprimir();
 private:
 
 };

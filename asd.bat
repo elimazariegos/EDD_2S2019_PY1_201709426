@@ -1,0 +1,1 @@
+C:\Users\Samuel\Desktop\Clases\Estructuras\2 semestre\Proyectos\EDD_2S2019_PY1_201709426\Parte1.csv

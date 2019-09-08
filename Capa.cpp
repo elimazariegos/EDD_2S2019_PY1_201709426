@@ -4,6 +4,18 @@
  * 
  * Created on 6 de septiembre de 2019, 09:40 PM
  */
+#include <cstdlib>
+#include<sstream>
+#include<stdlib.h>
+#include<iostream>
+#include <fstream>
+#include <stdio.h>
+#include <string.h>
+#include <cstring>
+
+#include "Cubo.h"
+
+using namespace std;
 
 #include "Capa.h"
 
@@ -114,4 +126,18 @@ void Capa::insertar_nodo(int y, int x, string color){
         tmp->abajo->arriba = nuevo;
     }
     tmp->abajo = nuevo;
+}
+void Capa::imprimir(){
+    if(!esta_vacia()){
+        Nodo_Capa* aux  = cabecera;
+        while(aux != 0){
+            Nodo_Capa* aux1 = aux;
+            while(aux1 != 0){
+                cout <<" "<< aux1->color<<" ["<<aux1->fila<<","<<aux1->columna<<"]";
+                aux1 = aux1->sig;
+            }
+            aux = aux->abajo;
+            cout<<""<<endl;
+        }
+    }
 }
