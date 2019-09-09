@@ -16,6 +16,7 @@
 #include "Cubo.h"
 #include "Generador_Imagen.h"
 #include "Arbol_ABB.h"
+#include "Lista_String.h"
 
 using namespace std;
 
@@ -24,6 +25,8 @@ using namespace std;
  */
 Cubo* cubo_disperso = new Cubo();
 Arbol_ABB* abb = new Arbol_ABB();
+Cubo* imagen_seleccionada;
+Lista_String* lista_img = new Lista_String();
 
 int es_entero(string ent) {
     int i = 0;
@@ -84,8 +87,33 @@ Capa* crear_capa(string cadena) {
     return capa;
 }
 
-void menu_seleccionar_imagen() {
+void llenar_lista_img(Nodo_ABB * tmp){
+    if(tmp != 0){
+        llenar_lista_img(tmp->izquierdo);
+        lista_img->insertar(tmp->cubo->nombre);
+        llenar_lista_img(tmp->derecho);
+    }
+}
 
+void menu_seleccionar_imagen() {
+    llenar_lista_img(abb->raiz);
+    cout << "[************************************************]" << endl;
+    cout << "BIENVENIDO AL SISTEMA PHOTOGEN++" << endl;
+    cout << "[************************************************]" << endl;
+    for(int i = 1; i <= lista_img->size; i++){
+        cout << "[" << i << "] " << lista_img->buscar(i) << endl;
+    }
+    cout << "[************************************************]" << endl;        
+    cout << "Seleccione una opcion" << endl;
+    cout << "-->";
+    string op;
+    cin>>op;
+    int opcion  = es_entero(op);
+    if(opcion != -1){
+        imagen_seleccionada = abb->buscar(lista_img->buscar(opcion) ,abb->raiz)->cubo;
+        cout << "[************************************************]" << endl;
+        cout << "se ha seleccionado correctamente la imagen con nombre: " << lista_img->buscar(opcion)<<endl;
+    }    
 }
 
 Cubo* crear_cubo(string config) {
@@ -95,16 +123,10 @@ Cubo* crear_cubo(string config) {
     iw = ih = pw = ph = 0;
     string cantidad = "";
     config = config + "\r";
-    while(i < config.size()){
-        
+    while(i < config.size()){ 
         if (config[i] == '\r') {i++;break;}
-        
-        while (config[i] != ',') {
-            i++;
-        }
-        if (config[i] == ',') {
-            i++;
-        }
+        while (config[i] != ',') {i++;}
+        if (config[i] == ',') {i++;}
         
         while(config[i] != '\r'){
           cantidad = cantidad + config[i];
@@ -140,23 +162,14 @@ void menu_insertar_imagen() {
     string n_capa = "";
     while (i < init.size()) {
         
-        if (init[i] == '\r') {
-            i++;
-            break;
-        }
-        while (init[i] != ',') {
-            i++;
-        }
-        if (init[i] == ',') {
-            i++;
-        }
+        if (init[i] == '\r') {i++;break;}
+        while (init[i] != ',') {i++;}
+        if (init[i] == ',') {i++;}
         while (init[i] != '\r') {
             n_capa = n_capa + init[i];
             i++;
         }
-        if (init[i] == '\r') {
-            i++;
-        }
+        if (init[i] == '\r') {i++;}
         
         if(index == 0){
             cubo =  crear_cubo(abrir_archivo(n_capa));
@@ -171,6 +184,7 @@ void menu_insertar_imagen() {
         index++;
         n_capa = "";
     }
+    abb->insertar_nodo(cubo);
 }
 
 void principal() {
@@ -197,6 +211,11 @@ void principal() {
                 menu_insertar_imagen();
                 break;
             case 2:
+                if(abb->esta_vacio()){
+                cout << "No hay imagenes cargadas en el sistema" << endl;    
+                }else{
+                    menu_seleccionar_imagen();
+                }
                 break;
             case 3:
                 break;

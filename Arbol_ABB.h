@@ -15,8 +15,10 @@ class Arbol_ABB {
 public:
     Arbol_ABB();
     Nodo_ABB* raiz = 0;
+    int size = 0;
     void insertar_nodo(Cubo* cubo_);
     void insertar_nodo(Cubo* cubo_, Nodo_ABB* tmp);
+    Nodo_ABB* buscar(string nombre, Nodo_ABB* tmp);
     bool esta_vacio();
 private:
 

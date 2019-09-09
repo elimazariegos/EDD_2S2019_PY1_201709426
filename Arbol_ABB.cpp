@@ -8,6 +8,7 @@
 #include "Arbol_ABB.h"
 
 Arbol_ABB::Arbol_ABB() {
+    size = 0;
 }
 void Arbol_ABB::insertar_nodo(Cubo* cubo_){
     if(esta_vacio()){
@@ -16,6 +17,7 @@ void Arbol_ABB::insertar_nodo(Cubo* cubo_){
     }else{
         insertar_nodo(cubo_, raiz);
     }
+    size++;
 }
 void Arbol_ABB::insertar_nodo(Cubo* cubo_, Nodo_ABB* tmp) {
     if(cubo_->nombre < tmp->cubo->nombre){
@@ -36,3 +38,20 @@ void Arbol_ABB::insertar_nodo(Cubo* cubo_, Nodo_ABB* tmp) {
 }
 bool Arbol_ABB::esta_vacio(){return raiz == 0;}
 
+Nodo_ABB* Arbol_ABB::buscar(string nombre, Nodo_ABB* tmp) {
+    Nodo_ABB* arbol = 0;
+    if (!esta_vacio()) {
+        if (nombre == tmp->cubo->nombre) {
+            return tmp;
+        } else {
+            if (tmp->derecho != 0 and tmp->izquierdo != 0) {
+                if (nombre < tmp->cubo->nombre) {
+                    arbol = buscar(nombre, tmp->izquierdo);
+                } else {
+                    arbol = buscar(nombre, tmp->derecho);
+                }
+            }
+        }
+    }
+    return arbol;
+}

@@ -39,9 +39,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/Capa.o \
 	${OBJECTDIR}/Cubo.o \
 	${OBJECTDIR}/Generador_Imagen.o \
+	${OBJECTDIR}/Lista_String.o \
 	${OBJECTDIR}/Nodo_ABB.o \
 	${OBJECTDIR}/Nodo_Capa.o \
 	${OBJECTDIR}/Nodo_Cubo.o \
+	${OBJECTDIR}/Nodo_String.o \
 	${OBJECTDIR}/main.o
 
 
@@ -89,6 +91,11 @@ ${OBJECTDIR}/Generador_Imagen.o: Generador_Imagen.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Generador_Imagen.o Generador_Imagen.cpp
 
+${OBJECTDIR}/Lista_String.o: Lista_String.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Lista_String.o Lista_String.cpp
+
 ${OBJECTDIR}/Nodo_ABB.o: Nodo_ABB.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -103,6 +110,11 @@ ${OBJECTDIR}/Nodo_Cubo.o: Nodo_Cubo.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo_Cubo.o Nodo_Cubo.cpp
+
+${OBJECTDIR}/Nodo_String.o: Nodo_String.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo_String.o Nodo_String.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
