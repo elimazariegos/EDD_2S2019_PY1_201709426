@@ -14,12 +14,16 @@
 class Cubo {
 public:
     Cubo();
-    Cubo(string nombre_);
+    Cubo(string nombre_, int pixel_w_, int pixel_h_, int imagen_w_, int imagen_h_);
     Nodo_Cubo* cabeza = 0;
     string nombre;
     int fila_mayor = 0;
     int columna_mayor = 0;
     int size = 0;
+    int pixel_w = 0;
+    int pixel_h = 0;
+    int imagen_w = 0;
+    int imagen_h = 0;
     bool esta_vacia();
     void insertar_capa(Capa* capa_);
     

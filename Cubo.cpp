@@ -9,6 +9,15 @@
 
 Cubo::Cubo() {
 }
+
+Cubo::Cubo(string nombre_, int pixel_w_, int pixel_h_, int imagen_w_, int imagen_h_) {
+    this->nombre = nombre_;
+    this->pixel_w = pixel_w_;
+    this->pixel_h = pixel_h_;
+    this->imagen_w = imagen_w_;
+    this->imagen_h = imagen_h_; 
+}
+
 bool Cubo::esta_vacia(){return cabeza == 0;}
 
 void Cubo::insertar_capa(Capa* capa_){

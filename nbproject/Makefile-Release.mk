@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Arbol_ABB.o \
 	${OBJECTDIR}/Capa.o \
 	${OBJECTDIR}/Cubo.o \
+	${OBJECTDIR}/Generador_Imagen.o \
 	${OBJECTDIR}/Nodo_ABB.o \
 	${OBJECTDIR}/Nodo_Capa.o \
 	${OBJECTDIR}/Nodo_Cubo.o \
@@ -82,6 +83,11 @@ ${OBJECTDIR}/Cubo.o: Cubo.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cubo.o Cubo.cpp
+
+${OBJECTDIR}/Generador_Imagen.o: Generador_Imagen.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Generador_Imagen.o Generador_Imagen.cpp
 
 ${OBJECTDIR}/Nodo_ABB.o: Nodo_ABB.cpp 
 	${MKDIR} -p ${OBJECTDIR}

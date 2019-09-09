@@ -7,6 +7,7 @@
       <itemPath>Arbol_ABB.h</itemPath>
       <itemPath>Capa.h</itemPath>
       <itemPath>Cubo.h</itemPath>
+      <itemPath>Generador_Imagen.h</itemPath>
       <itemPath>Nodo_ABB.h</itemPath>
       <itemPath>Nodo_Capa.h</itemPath>
       <itemPath>Nodo_Cubo.h</itemPath>
@@ -21,6 +22,7 @@
       <itemPath>Arbol_ABB.cpp</itemPath>
       <itemPath>Capa.cpp</itemPath>
       <itemPath>Cubo.cpp</itemPath>
+      <itemPath>Generador_Imagen.cpp</itemPath>
       <itemPath>Nodo_ABB.cpp</itemPath>
       <itemPath>Nodo_Capa.cpp</itemPath>
       <itemPath>Nodo_Cubo.cpp</itemPath>
@@ -59,6 +61,10 @@
       <item path="Cubo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Cubo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Generador_Imagen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Generador_Imagen.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Nodo_ABB.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -106,6 +112,10 @@
       <item path="Cubo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Cubo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Generador_Imagen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Generador_Imagen.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Nodo_ABB.cpp" ex="false" tool="1" flavor2="0">
       </item>
