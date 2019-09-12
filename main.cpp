@@ -17,6 +17,7 @@
 #include "Generador_Imagen.h"
 #include "Arbol_ABB.h"
 #include "Lista_String.h"
+#include "Lista_Filtro.h"
 
 using namespace std;
 
@@ -25,9 +26,10 @@ using namespace std;
  */
 Cubo* cubo_disperso = new Cubo();
 Arbol_ABB* abb = new Arbol_ABB();
-Cubo* imagen_seleccionada;
+Cubo* imagen_seleccionada = 0;
 Lista_String* lista_img = new Lista_String();
-
+Generador_Imagen* gn = new Generador_Imagen();
+Lista_Filtro* lista_fitros;
 int es_entero(string ent) {
     int i = 0;
     string aux = "";
@@ -46,12 +48,14 @@ int es_entero(string ent) {
 string abrir_archivo(string direccion) {
     string cadena = "";
     ifstream fe(direccion);
-    while (!fe.eof()) {
-        string linea = "";
-        getline(fe, linea);
-        cadena = cadena + linea;
+    if (fe.good()) {
+        while (!fe.eof()) {
+            string linea = "";
+            getline(fe, linea);
+            cadena = cadena + linea;
+        }
+        fe.close();
     }
-    fe.close();
     return cadena;
 }
 
@@ -87,8 +91,8 @@ Capa* crear_capa(string cadena) {
     return capa;
 }
 
-void llenar_lista_img(Nodo_ABB * tmp){
-    if(tmp != 0){
+void llenar_lista_img(Nodo_ABB * tmp) {
+    if (tmp != 0) {
         llenar_lista_img(tmp->izquierdo);
         lista_img->insertar(tmp->cubo->nombre);
         llenar_lista_img(tmp->derecho);
@@ -100,47 +104,64 @@ void menu_seleccionar_imagen() {
     cout << "[************************************************]" << endl;
     cout << "BIENVENIDO AL SISTEMA PHOTOGEN++" << endl;
     cout << "[************************************************]" << endl;
-    for(int i = 1; i <= lista_img->size; i++){
+    for (int i = 1; i <= lista_img->size; i++) {
         cout << "[" << i << "] " << lista_img->buscar(i) << endl;
     }
-    cout << "[************************************************]" << endl;        
+    cout << "[************************************************]" << endl;
     cout << "Seleccione una opcion" << endl;
     cout << "-->";
     string op;
     cin>>op;
-    int opcion  = es_entero(op);
-    if(opcion != -1){
-        imagen_seleccionada = abb->buscar(lista_img->buscar(opcion) ,abb->raiz)->cubo;
+    int opcion = es_entero(op);
+    if (opcion != -1) {
+        imagen_seleccionada = abb->buscar(lista_img->buscar(opcion), abb->raiz)->cubo;
         cout << "[************************************************]" << endl;
-        cout << "se ha seleccionado correctamente la imagen con nombre: " << lista_img->buscar(opcion)<<endl;
-    }    
+        cout << "se ha seleccionado correctamente la imagen con nombre: " << lista_img->buscar(opcion) << endl;
+    }
 }
 
 Cubo* crear_cubo(string config) {
     int i = 0;
     int index = 0;
-    int iw, ih,pw,ph;
+    int iw, ih, pw, ph;
     iw = ih = pw = ph = 0;
     string cantidad = "";
     config = config + "\r";
-    while(i < config.size()){ 
-        if (config[i] == '\r') {i++;break;}
-        while (config[i] != ',') {i++;}
-        if (config[i] == ',') {i++;}
-        
-        while(config[i] != '\r'){
-          cantidad = cantidad + config[i];
+    while (i < config.size()) {
+        if (config[i] == '\r') {
+            i++;
+            break;
+        }
+        while (config[i] != ',') {
             i++;
         }
-        if (config[i] == '\r') {i++;}
-        if(index == 1){ iw = es_entero(cantidad);}
-        if(index == 2){ ih = es_entero(cantidad);}
-        if(index == 3){ pw = es_entero(cantidad);}
-        if(index == 4){ ph = es_entero(cantidad);}
+        if (config[i] == ',') {
+            i++;
+        }
+
+        while (config[i] != '\r') {
+            cantidad = cantidad + config[i];
+            i++;
+        }
+        if (config[i] == '\r') {
+            i++;
+        }
+        if (index == 1) {
+            iw = es_entero(cantidad);
+        }
+        if (index == 2) {
+            ih = es_entero(cantidad);
+        }
+        if (index == 3) {
+            pw = es_entero(cantidad);
+        }
+        if (index == 4) {
+            ph = es_entero(cantidad);
+        }
         index++;
         cantidad = "";
     }
-    Cubo* cubo = new Cubo("",pw,ph,iw,ih);
+    Cubo* cubo = new Cubo("", pw, ph, iw, ih);
     return cubo;
 }
 
@@ -156,35 +177,94 @@ void menu_insertar_imagen() {
     string direccion = "";
     direccion = nombre + ".csv";
     string init = abrir_archivo(direccion);
-    init = init + "\r";
-    int i = 0;
-    int index = -1;
-    string n_capa = "";
-    while (i < init.size()) {
-        
-        if (init[i] == '\r') {i++;break;}
-        while (init[i] != ',') {i++;}
-        if (init[i] == ',') {i++;}
-        while (init[i] != '\r') {
-            n_capa = n_capa + init[i];
-            i++;
+    if(init != ""){
+        init = init + "\r";
+        int i = 0;
+        int index = -1;
+        string n_capa = "";
+        while (i < init.size()) {
+
+            if (init[i] == '\r') {
+                i++;
+                break;
+            }
+            while (init[i] != ',') {
+                i++;
+            }
+            if (init[i] == ',') {
+                i++;
+            }
+            while (init[i] != '\r') {
+                n_capa = n_capa + init[i];
+                i++;
+            }
+            if (init[i] == '\r') {
+                i++;
+            }
+
+            if (index == 0) {
+                cubo = crear_cubo(abrir_archivo(n_capa));
+                cubo->nombre = nombre;
+            }
+
+            if (index > 0) {
+                Capa* tmp = new Capa(n_capa);
+                tmp = crear_capa(abrir_archivo(n_capa));
+                cubo->insertar_capa(tmp);
+            }
+            index++;
+            n_capa = "";
         }
-        if (init[i] == '\r') {i++;}
-        
-        if(index == 0){
-            cubo =  crear_cubo(abrir_archivo(n_capa));
-            cubo->nombre = nombre;
-        }
-        
-        if (index > 0) {
-            Capa* tmp = new Capa(n_capa);
-            tmp = crear_capa(abrir_archivo(n_capa));
-            cubo->insertar_capa(tmp);
-        }
-        index++;
-        n_capa = "";
+        abb->insertar_nodo(cubo);
+        }else{
+        cout << "No se pudo abrir el archivo" << endl;
     }
-    abb->insertar_nodo(cubo);
+    
+}
+
+void menu_aplicar_filtros(string capa){
+int opcion = -1;
+    while (opcion != 0) {
+     
+        cout << "[1] Negativo" << endl;
+        cout << "[2] Escala de Grises" << endl;
+        cout << "[3] Espejo en X" << endl;
+        cout << "[4] Espejo en Y" << endl;
+        cout << "[5] Espejo en Ambos ejes" << endl;
+        cout << "[6] Collage" << endl;
+        cout << "[7] Mosaico" << endl;
+        cout << "[0] Regresar" << endl;
+        cout << "[************************************************]" << endl;
+        cout << "Seleccione una opcion" << endl;
+        cout << "-->";
+
+        string op;
+        cin>>op;
+        opcion = es_entero(op);
+        switch (opcion) {
+            case 1:
+                
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 0:
+                opcion = 0;
+                break;
+            default:
+                cout << "opcion incorrecta" << endl;
+                break;
+        }
+
+    }
+    
 }
 
 void principal() {
@@ -211,17 +291,49 @@ void principal() {
                 menu_insertar_imagen();
                 break;
             case 2:
-                if(abb->esta_vacio()){
-                cout << "No hay imagenes cargadas en el sistema" << endl;    
-                }else{
+                if (abb->esta_vacio()) {
+                    cout << "No hay imagenes cargadas en el sistema" << endl;
+                } else {
                     menu_seleccionar_imagen();
                 }
                 break;
             case 3:
+                if(imagen_seleccionada != 0){
+                    cout << "[************************************************]" << endl;
+                    cout << "Bienvenido a la exportacion de imagenes..." << endl;
+                    cout << "[************************************************]" << endl;
+                    cout << "[1] Filtro a Imagen completa" << endl;
+                    cout << "[2] Filtro a una capa en espeficio" << endl;
+                    cout << "[************************************************]" << endl;
+                    cout << "Seleccione una opcion" << endl;
+                    cout << "-->";
+
+                    string op;
+                    cin>>op;
+                    int filt = es_entero(op);
+                    
+                    if(filt == 1){
+                        
+                    }else if(filt == 2){
+                    
+                    }else{
+                    
+                    }
+                }
                 break;
             case 4:
                 break;
             case 5:
+                if(imagen_seleccionada != 0){
+                    cout << "[************************************************]" << endl;
+                    cout << "Bienvenido a la exportacion de imagenes..." << endl;
+                    cout << "Se ha exportado correctamente la imagen " << imagen_seleccionada->nombre << endl;
+                    //gn->generar_imagen(imagen_seleccionada);
+                    cout << "abriendo la imagen " << imagen_seleccionada->nombre << endl;
+                }else{
+                    cout << "No se ha seleccionado una imagen" <<endl;
+                }
+                
                 break;
             case 6:
                 break;

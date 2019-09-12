@@ -17,12 +17,16 @@
 Generador_Imagen::Generador_Imagen() {
 }
 
-void Generador_Imagen::generar_imagen(Cubo* cubo, int ph, int pw, int iw, int ih) {
+
+void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
     ofstream file_html;
     ofstream file_css;
-
-    iw = pw *  cubo->columna_mayor;
+    int ph  = 0, pw = 0, iw = 0, ih = 0;
     
+    iw = cubo->pixel_w *  cubo->columna_mayor;
+    ih = cubo->imagen_h;
+    pw = cubo->pixel_w;
+    ph = cubo->pixel_h;    
     file_html.open(cubo->nombre + ".html");
     file_css.open(cubo->nombre + ".css");
 
@@ -48,7 +52,7 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, int ph, int pw, int iw, int ih
         while (aux_capa_dw != 0) {
             Nodo_Capa* aux_capa_sg = aux_capa_dw->sig;
             while (aux_capa_sg != 0) {
-
+                
                 file_html << "<div class=\"pixel\"></div>" << endl;
                 if (aux_capa_sg->color != "x") {
                     file_css << ".pixel:nth-child(" << index << "){\nbackground: rgb(" << aux_capa_sg->color << ");\n}" << endl;
@@ -59,9 +63,11 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, int ph, int pw, int iw, int ih
             aux_capa_dw = aux_capa_dw->abajo;
         }       
         aux_cube = aux_cube->sig;
-        index = 0;
+        index = 1;
     }
     file_html << "</div>\n</body>\n</html>" << endl;
+    string title = cubo->nombre + ".html";
+    ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
 }
 
 

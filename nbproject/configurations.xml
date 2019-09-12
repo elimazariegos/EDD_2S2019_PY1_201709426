@@ -8,10 +8,12 @@
       <itemPath>Capa.h</itemPath>
       <itemPath>Cubo.h</itemPath>
       <itemPath>Generador_Imagen.h</itemPath>
+      <itemPath>Lista_Filtro.h</itemPath>
       <itemPath>Lista_String.h</itemPath>
       <itemPath>Nodo_ABB.h</itemPath>
       <itemPath>Nodo_Capa.h</itemPath>
       <itemPath>Nodo_Cubo.h</itemPath>
+      <itemPath>Nodo_Filtro.h</itemPath>
       <itemPath>Nodo_String.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -25,10 +27,12 @@
       <itemPath>Capa.cpp</itemPath>
       <itemPath>Cubo.cpp</itemPath>
       <itemPath>Generador_Imagen.cpp</itemPath>
+      <itemPath>Lista_Filtro.cpp</itemPath>
       <itemPath>Lista_String.cpp</itemPath>
       <itemPath>Nodo_ABB.cpp</itemPath>
       <itemPath>Nodo_Capa.cpp</itemPath>
       <itemPath>Nodo_Cubo.cpp</itemPath>
+      <itemPath>Nodo_Filtro.cpp</itemPath>
       <itemPath>Nodo_String.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -70,6 +74,10 @@
       </item>
       <item path="Generador_Imagen.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Lista_Filtro.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lista_Filtro.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Lista_String.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Lista_String.h" ex="false" tool="3" flavor2="0">
@@ -85,6 +93,10 @@
       <item path="Nodo_Cubo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo_Cubo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo_Filtro.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Nodo_Filtro.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Nodo_String.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -129,6 +141,10 @@
       </item>
       <item path="Generador_Imagen.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Lista_Filtro.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lista_Filtro.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Lista_String.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Lista_String.h" ex="false" tool="3" flavor2="0">
@@ -144,6 +160,10 @@
       <item path="Nodo_Cubo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo_Cubo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo_Filtro.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Nodo_Filtro.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Nodo_String.cpp" ex="false" tool="1" flavor2="0">
       </item>

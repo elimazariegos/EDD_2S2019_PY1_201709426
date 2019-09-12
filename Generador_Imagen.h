@@ -15,11 +15,12 @@
 #include<sstream>
 #include<string>
 
+using namespace std;
 
 class Generador_Imagen {
 public:
     Generador_Imagen();
-    void generar_imagen(Cubo* cubo, int ph, int pw, int iw , int ih);
+    void generar_imagen(Cubo* cubo, string filtro);
 private:
 
 };

@@ -26,7 +26,7 @@ public:
     int imagen_h = 0;
     bool esta_vacia();
     void insertar_capa(Capa* capa_);
-    
+    Capa* buscar(string nombre);
     
    
     

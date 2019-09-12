@@ -44,3 +44,7 @@ void Cubo::insertar_capa(Capa* capa_){
     }
     size = size + 1;
 }
+
+Capa* Cubo::buscar(string nombre){
+    
+}
