@@ -27,6 +27,7 @@ public:
     bool esta_vacia();
     void insertar_capa(Capa* capa_);
     Capa* buscar(string nombre);
+    void modificar(int x, int y, string capa, string color, string filtro);
     
    
     

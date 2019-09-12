@@ -28,5 +28,6 @@ void Lista_Filtro::insertar_al_frente(string filtro_, string capa_){
         cabeza->ant = cola;
     }
     size++;
+    cout << "se inserto correctamente el filtro" << endl;
 }
 

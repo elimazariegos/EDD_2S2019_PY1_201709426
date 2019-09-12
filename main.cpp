@@ -29,7 +29,7 @@ Arbol_ABB* abb = new Arbol_ABB();
 Cubo* imagen_seleccionada = 0;
 Lista_String* lista_img = new Lista_String();
 Generador_Imagen* gn = new Generador_Imagen();
-Lista_Filtro* lista_fitros;
+Lista_Filtro* lista_fitros = 0;
 int es_entero(string ent) {
     int i = 0;
     string aux = "";
@@ -223,48 +223,50 @@ void menu_insertar_imagen() {
 }
 
 void menu_aplicar_filtros(string capa){
-int opcion = -1;
-    while (opcion != 0) {
-     
-        cout << "[1] Negativo" << endl;
-        cout << "[2] Escala de Grises" << endl;
-        cout << "[3] Espejo en X" << endl;
-        cout << "[4] Espejo en Y" << endl;
-        cout << "[5] Espejo en Ambos ejes" << endl;
-        cout << "[6] Collage" << endl;
-        cout << "[7] Mosaico" << endl;
-        cout << "[0] Regresar" << endl;
-        cout << "[************************************************]" << endl;
-        cout << "Seleccione una opcion" << endl;
-        cout << "-->";
+   if(lista_fitros == 0){
+       lista_fitros = new Lista_Filtro(imagen_seleccionada);
+   }     
+    cout << "[1] Negativo" << endl;
+    cout << "[2] Escala de Grises" << endl;
+    cout << "[3] Espejo en X" << endl;
+    cout << "[4] Espejo en Y" << endl;
+    cout << "[5] Espejo en Ambos ejes" << endl;
+    cout << "[6] Collage" << endl;
+    cout << "[7] Mosaico" << endl;
+    cout << "[************************************************]" << endl;
+    cout << "Seleccione una opcion" << endl;
+    cout << "-->";
 
-        string op;
-        cin>>op;
-        opcion = es_entero(op);
-        switch (opcion) {
-            case 1:
-                
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 0:
-                opcion = 0;
-                break;
-            default:
-                cout << "opcion incorrecta" << endl;
-                break;
-        }
-
+    string op;
+    cin>>op;
+    int opcion = es_entero(op);
+    switch (opcion) {
+        case 1:
+            lista_fitros->insertar_al_frente("negativo",capa);
+            break;
+        case 2:
+            lista_fitros->insertar_al_frente("grises",capa);
+            break;
+        case 3:
+            lista_fitros->insertar_al_frente("espx",capa);
+            break;
+        case 4:
+            lista_fitros->insertar_al_frente("espy",capa);
+            break;
+        case 5:
+            lista_fitros->insertar_al_frente("espxy",capa);
+            break;
+        case 6:
+            lista_fitros->insertar_al_frente("collage",capa);
+            break;
+        case 7:
+            lista_fitros->insertar_al_frente("mosaico",capa);
+            break;
+        default:
+            cout << "opcion incorrecta" <<endl;
+            break;
     }
-    
+
 }
 
 void principal() {
@@ -311,13 +313,21 @@ void principal() {
                     string op;
                     cin>>op;
                     int filt = es_entero(op);
-                    
+                    string nombre_capa = "";
                     if(filt == 1){
-                        
+                        menu_aplicar_filtros(nombre_capa);
                     }else if(filt == 2){
-                    
+                        cout << "[************************************************]" << endl;
+                        cout << "Ingrese el nombre de la capa" << endl;
+                        cout << "-->";
+                        cin>>nombre_capa;
+                        if(imagen_seleccionada->buscar(nombre_capa) != 0){
+                            menu_aplicar_filtros(nombre_capa);
+                        }else{
+                            cout << "No existe la capa con el nombre: " << nombre_capa << endl;
+                        }
                     }else{
-                    
+                        cout << "opcion incorrecta" << endl;
                     }
                 }
                 break;

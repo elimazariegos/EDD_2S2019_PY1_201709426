@@ -46,5 +46,40 @@ void Cubo::insertar_capa(Capa* capa_){
 }
 
 Capa* Cubo::buscar(string nombre){
-    
+    if(esta_vacia()){return 0;}
+    else{
+        Nodo_Cubo* aux = cabeza;
+        while(aux != 0){
+            if(aux->capa->nombre == nombre){
+                return aux->capa;
+            }
+            aux = aux->sig;
+        }
+    }
+}
+void Cubo::modificar(int x, int y, string capa, string color, string filtro){
+    if(esta_vacia()){}
+    else{
+        Nodo_Cubo* aux = cabeza;
+        while(aux != 0){
+            Nodo_Capa* aux_dw = aux->capa->cabecera->abajo;  
+            while(aux_dw != 0){
+                Nodo_Capa* aux_sg  = aux_dw->sig;
+                while(aux_sg != 0){
+                    if(aux->capa->nombre == capa){
+                        if(aux_sg->fila == y and aux_sg->columna == x){
+                            if(color != ""){
+                                aux_sg->color = color;
+                            }else if(filtro != ""){
+                                aux_sg->filtro = filtro;
+                            }
+                        }
+                    }
+                    aux_sg = aux_sg->sig;
+                }
+                aux_dw = aux_dw->abajo;
+            }
+            aux = aux->sig;
+        }
+    }
 }

@@ -16,11 +16,11 @@ using namespace std;
 
 class Capa {
 public:
-    Nodo_Capa* cabecera;
-    int max_fila;
-    int max_columna;
-    string nombre;
-    
+    Nodo_Capa* cabecera = 0;
+    int max_fila = 0;
+    int max_columna = 0;
+    string nombre = "";
+    string filtro = "";
     Capa();
     Capa(string nombre_);
     bool esta_vacia();
