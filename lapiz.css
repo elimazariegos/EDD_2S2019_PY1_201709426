@@ -14,6 +14,18 @@ float: left;
 width:30px;
 height:50px;
 }
+.canvas1{
+width:30px;
+height:50px;
+}
+.pixel1{
+	float: left;
+	width:2px;
+	height:4px;	
+}
+.pixel1:nth-child(1){
+	background: RED;
+}
 .pixel:nth-child(1){
 background: rgb(0,255,255);
 }

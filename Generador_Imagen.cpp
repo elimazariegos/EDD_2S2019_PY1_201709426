@@ -13,20 +13,68 @@
 #include<windows.h>
 #include<sstream>
 #include<string>
+#include <iomanip>
 
 Generador_Imagen::Generador_Imagen() {
 }
 
+void Generador_Imagen::generar_mosaico(Cubo* cubo) {
+    
+    float pw_f = pw;
+    float ph_f = ph;
+    float mcm = cubo->columna_mayor;
+    float mfm = cubo->fila_mayor;
+    
+    float pw_mosaico = (float) pw / cubo->columna_mayor;
+    float ph_mosaico = (float) ph / cubo->fila_mayor;
+    file_css << ".canvas"<<index_mosacio<<"{" << endl;
+    file_css << "width:" << pw << "px;" << endl;
+    file_css << "height:" << ph << "px;\n}" << endl;
+    
+    
+    file_css << ".pixel"<<index_mosacio<<"{" << endl;
+    file_css << "float: left;" << endl;
+    file_css << "width:" << pw_mosaico << "px;" << endl;
+    file_css << "height:" << ph_mosaico << "px;\n}" << endl;
+    
+    file_html << "<div class=\"canvas" << index_mosacio << "\">";
+    Nodo_Cubo* aux_cube = cubo->cabeza;
+    int index = 1;
+     
+    while (aux_cube != 0) {
+        Nodo_Capa* aux_capa_dw = aux_cube->capa->cabecera->abajo;
+        while (aux_capa_dw != 0) {
+            Nodo_Capa* aux_capa_sg = aux_capa_dw->sig;
+            while (aux_capa_sg != 0) {
+                
+                file_html << "<div class=\"pixel" << index_mosacio << "\"></div>" << endl;
+                if (aux_capa_sg->color != "x") {
+                    file_css << ".pixel"<<index_mosacio<<":nth-child(" << index << "){\nbackground: rgb("<< aux_capa_sg->color << ");\n}" << endl;
+                }
+                aux_capa_sg = aux_capa_sg->sig;
+                index++;
+            }
+            aux_capa_dw = aux_capa_dw->abajo;
+        }       
+        aux_cube = aux_cube->sig;
+        index = 1;
+    }
+    file_html << "</div>";
+}
 
 void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
-    ofstream file_html;
-    ofstream file_css;
-    int ph  = 0, pw = 0, iw = 0, ih = 0;
     
     iw = cubo->pixel_w *  cubo->columna_mayor;
-    ih = iw;
+    ih = cubo->pixel_h *  cubo->fila_mayor;
     pw = cubo->pixel_w;
     ph = cubo->pixel_h;    
+    
+    file_html.close();
+    file_css.close();
+    
+    file_css.clear();
+    file_html.clear();
+    
     file_html.open(cubo->nombre + filtro + ".html");
     file_css.open(cubo->nombre + filtro + ".css");
 
@@ -52,10 +100,11 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
         file_css << "transform: scaleX(-1);" << endl;
         file_css << "transform: rotate(180deg);" << endl;
     }
+    
     file_css << "}\n.pixel{\nfloat: left;" << endl;
     file_css << "width:" << pw << "px;" << endl;
     file_css << "height:" << ph << "px;\n}" << endl;
-
+    
     Nodo_Cubo* aux_cube = cubo->cabeza;
     int index = 1;
     while (aux_cube != 0) {
@@ -64,9 +113,14 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
             Nodo_Capa* aux_capa_sg = aux_capa_dw->sig;
             while (aux_capa_sg != 0) {
                 
-                file_html << "<div class=\"pixel\"></div>" << endl;
+                file_html << "<div class=\"pixel\">" << endl;
+                if(filtro == "mosaico" and aux_capa_sg->color != "x"){
+                    generar_mosaico(cubo);
+                    index_mosacio++;
+                }        
+                file_html << "</div>" << endl;
                 if (aux_capa_sg->color != "x") {
-                    file_css << ".pixel:nth-child(" << index << "){\nbackground: rgb("<< aux_capa_sg->color << ");\n}" << endl;
+                    file_css << ".pixel:nth-child(" << index << "){\nbackground: rgb("<< aux_capa_sg->color << ");\n}" << endl;    
                 }
                 aux_capa_sg = aux_capa_sg->sig;
                 index++;
@@ -79,7 +133,9 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
     file_html << "</div>\n</body>\n</html>" << endl;
     string title = cubo->nombre + filtro+ ".html";
     ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
+    index_mosacio = 0;
 }
+
 
 
 

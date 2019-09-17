@@ -19,8 +19,14 @@ using namespace std;
 
 class Generador_Imagen {
 public:
+    
+    ofstream file_html;
+    ofstream file_css ;
+    int index_mosacio = 1;
+    int ph  = 0, pw = 0, iw = 0, ih = 0;
     Generador_Imagen();
     void generar_imagen(Cubo* cubo, string filtro);
+    void generar_mosaico(Cubo* cubo);
 private:
 
 };
