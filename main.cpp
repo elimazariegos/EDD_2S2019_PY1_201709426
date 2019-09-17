@@ -30,6 +30,7 @@ Cubo* imagen_seleccionada = 0;
 Lista_String* lista_img = new Lista_String();
 Generador_Imagen* gn = new Generador_Imagen();
 Lista_Filtro* lista_fitros = 0;
+
 int es_entero(string ent) {
     int i = 0;
     string aux = "";
@@ -59,13 +60,13 @@ string abrir_archivo(string direccion) {
     return cadena;
 }
 
-Capa* crear_capa(string cadena) {
+Capa* crear_capa(string cadena, string nombre) {
 
     int x = 1;
     int y = 1;
     string color = "";
     cadena = cadena + "\r";
-    Capa* capa = new Capa("Body");
+    Capa* capa = new Capa(nombre);
     for (int i = 0; i < cadena.size(); i++) {
         while (cadena[i] != '\r') {
             while (cadena[i] != ',') {
@@ -100,6 +101,7 @@ void llenar_lista_img(Nodo_ABB * tmp) {
 }
 
 void menu_seleccionar_imagen() {
+    lista_img = new Lista_String();
     llenar_lista_img(abb->raiz);
     cout << "[************************************************]" << endl;
     cout << "BIENVENIDO AL SISTEMA PHOTOGEN++" << endl;
@@ -208,8 +210,8 @@ void menu_insertar_imagen() {
             }
 
             if (index > 0) {
-                Capa* tmp = new Capa(n_capa);
-                tmp = crear_capa(abrir_archivo(n_capa));
+                Capa* tmp;
+                tmp = crear_capa(abrir_archivo(n_capa),n_capa);
                 cubo->insertar_capa(tmp);
             }
             index++;
@@ -248,13 +250,13 @@ void menu_aplicar_filtros(string capa){
             lista_fitros->insertar_al_frente("grises",capa);
             break;
         case 3:
-            lista_fitros->insertar_al_frente("espx",capa);
+            lista_fitros->insertar_al_frente("espejo-x",capa);
             break;
         case 4:
-            lista_fitros->insertar_al_frente("espy",capa);
+            lista_fitros->insertar_al_frente("espejo-y",capa);
             break;
         case 5:
-            lista_fitros->insertar_al_frente("espxy",capa);
+            lista_fitros->insertar_al_frente("espejo-xy",capa);
             break;
         case 6:
             lista_fitros->insertar_al_frente("collage",capa);
@@ -269,6 +271,56 @@ void menu_aplicar_filtros(string capa){
 
 }
 
+void menu_exportar_imagen(){
+    cout << "[************************************************]" << endl;
+    cout << "BIENVENIDO AL SISTEMA PHOTOGEN++" << endl;
+    cout << "[************************************************]" << endl;
+    cout << "[1] Exportar Imagen original" << endl;
+    Nodo_Filtro* aux = lista_fitros->cabeza;
+    int i = 2;
+    do{
+        
+        if(aux->capa == ""){
+            cout << "["<< i<<"]" << " Imagen Completa" <<"-"<< aux->filtro << endl;
+        
+        }else{
+            cout << "["<< i<<"] " << aux->capa <<"-"<< aux->filtro << endl;
+        
+        }
+                
+        aux = aux->sig;
+        if((i - 1) == lista_fitros->size){
+            break;
+        }
+        i++;
+        
+    }while(aux != lista_fitros->cabeza);
+    
+    cout << "[************************************************]" << endl;
+    cout << "Seleccione una opcion" << endl;
+    cout << "-->";
+    string ent;
+    cin>>ent;
+    int entrada = es_entero(ent);
+    if(entrada <= i and entrada > 0){
+         if(entrada == 1){
+             gn->generar_imagen(imagen_seleccionada, "");
+         }else{
+            Nodo_Filtro* tmp_fl =  lista_fitros->buscar(entrada - 1);
+            if(tmp_fl->capa == ""){
+                gn->generar_imagen(imagen_seleccionada, tmp_fl->filtro);
+            }else{
+                Cubo* cubo_aux = new Cubo(tmp_fl->capa, imagen_seleccionada->pixel_w, imagen_seleccionada->pixel_h,
+                        imagen_seleccionada->imagen_w, imagen_seleccionada->imagen_h);
+                Capa* capa_aux = imagen_seleccionada->buscar(tmp_fl->capa);
+                cubo_aux->insertar_capa(capa_aux);
+                gn->generar_imagen(cubo_aux, tmp_fl->filtro);
+            }
+         }   
+    }else{
+        cout << "opcion incorrecta" << endl;
+    }
+}
 void principal() {
     int opcion = -1;
     while (opcion != 0) {
@@ -335,15 +387,14 @@ void principal() {
                 break;
             case 5:
                 if(imagen_seleccionada != 0){
-                    cout << "[************************************************]" << endl;
-                    cout << "Bienvenido a la exportacion de imagenes..." << endl;
-                    cout << "Se ha exportado correctamente la imagen " << imagen_seleccionada->nombre << endl;
-                    //gn->generar_imagen(imagen_seleccionada);
-                    cout << "abriendo la imagen " << imagen_seleccionada->nombre << endl;
+                    if(lista_fitros != 0){
+                        menu_exportar_imagen();
+                    }else{
+                        cout << "No se han aplicado filtros a la imagen " << imagen_seleccionada->nombre << endl;
+                    }
                 }else{
                     cout << "No se ha seleccionado una imagen" <<endl;
                 }
-                
                 break;
             case 6:
                 break;

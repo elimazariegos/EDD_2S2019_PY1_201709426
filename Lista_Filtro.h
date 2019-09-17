@@ -26,6 +26,7 @@ public:
     int size = 0;
     bool esta_vacia();
     void insertar_al_frente(string filtro_, string capa_);
+    Nodo_Filtro* buscar(int index_);
     Lista_Filtro(Cubo* cubo_);
 private:
 

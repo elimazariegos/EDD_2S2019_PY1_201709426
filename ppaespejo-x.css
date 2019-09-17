@@ -7,9 +7,10 @@ align-items: center;
 }
 .canvas{
 width:600px;
-height:600px;
-}
+height:16px;
 
+transform: scaleX(-1);
+}
 .pixel{
 float: left;
 width:30px;
@@ -1781,10 +1782,4 @@ background: rgb(244,19,12);
 }
 .pixel:nth-child(75){
 background: rgb(244,19,12);
-}
-.pixel:nth-child(90){
-background: rgb(     x);
-}
-.pixel:nth-child(273){
-background: rgb( x );
 }

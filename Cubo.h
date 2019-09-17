@@ -10,7 +10,7 @@
 
 #include "Nodo_Cubo.h"
 
-
+using namespace std;
 class Cubo {
 public:
     Cubo();
