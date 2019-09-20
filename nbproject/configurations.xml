@@ -8,6 +8,7 @@
       <itemPath>Capa.h</itemPath>
       <itemPath>Cubo.h</itemPath>
       <itemPath>Generador_Imagen.h</itemPath>
+      <itemPath>Generador_Repore.h</itemPath>
       <itemPath>Lista_Filtro.h</itemPath>
       <itemPath>Lista_String.h</itemPath>
       <itemPath>Nodo_ABB.h</itemPath>
@@ -27,6 +28,7 @@
       <itemPath>Capa.cpp</itemPath>
       <itemPath>Cubo.cpp</itemPath>
       <itemPath>Generador_Imagen.cpp</itemPath>
+      <itemPath>Generador_Repore.cpp</itemPath>
       <itemPath>Lista_Filtro.cpp</itemPath>
       <itemPath>Lista_String.cpp</itemPath>
       <itemPath>Nodo_ABB.cpp</itemPath>
@@ -73,6 +75,10 @@
       <item path="Generador_Imagen.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Generador_Imagen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Generador_Repore.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Generador_Repore.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Lista_Filtro.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -140,6 +146,10 @@
       <item path="Generador_Imagen.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Generador_Imagen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Generador_Repore.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Generador_Repore.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Lista_Filtro.cpp" ex="false" tool="1" flavor2="0">
       </item>

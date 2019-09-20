@@ -46,19 +46,19 @@ int es_entero(string ent) {
     return i;
 }
 
-string abrir_archivo(string direccion) {
-    string cadena = "";
-    ifstream fe(direccion);
-    if (fe.good()) {
-        while (!fe.eof()) {
-            string linea = "";
-            getline(fe, linea);
-            cadena = cadena + linea;
+    string abrir_archivo(string direccion) {
+        string cadena = "";
+        ifstream fe(direccion);
+        if (fe.good()) {
+            while (!fe.eof()) {
+                string linea = "";
+                getline(fe, linea);
+                cadena = cadena + linea;
+            }
+            fe.close();
         }
-        fe.close();
+        return cadena;
     }
-    return cadena;
-}
 
 Capa* crear_capa(string cadena, string nombre) {
 
@@ -92,6 +92,14 @@ Capa* crear_capa(string cadena, string nombre) {
     return capa;
 }
 
+void menu_reportes(){
+    cout << "[************************************************]" << endl;
+    cout << "BIENVENIDO AL MENU INSERTAR IMAGEN" << endl;
+    cout << "[************************************************]" << endl;
+}
+
+
+
 void llenar_lista_img(Nodo_ABB * tmp) {
     if (tmp != 0) {
         llenar_lista_img(tmp->izquierdo);
@@ -100,11 +108,13 @@ void llenar_lista_img(Nodo_ABB * tmp) {
     }
 }
 
+
+
 void menu_seleccionar_imagen() {
     lista_img = new Lista_String();
     llenar_lista_img(abb->raiz);
     cout << "[************************************************]" << endl;
-    cout << "BIENVENIDO AL SISTEMA PHOTOGEN++" << endl;
+    cout << "BIENVENIDO AL MENU SELECCIONAR IMAGEN" << endl;
     cout << "[************************************************]" << endl;
     for (int i = 1; i <= lista_img->size; i++) {
         cout << "[" << i << "] " << lista_img->buscar(i) << endl;
@@ -170,7 +180,7 @@ Cubo* crear_cubo(string config) {
 void menu_insertar_imagen() {
     Cubo* cubo = new Cubo();
     cout << "[************************************************]" << endl;
-    cout << "BIENVENIDO AL SISTEMA PHOTOGEN++" << endl;
+    cout << "BIENVENIDO AL MENU INSERTAR IMAGEN" << endl;
     cout << "[************************************************]" << endl;
     cout << "Ingrese el nombre del archivo [Sin extencion (sin el .csv)]" << endl;
     cout << "-->";

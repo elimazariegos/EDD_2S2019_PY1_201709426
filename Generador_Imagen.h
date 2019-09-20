@@ -24,9 +24,18 @@ public:
     ofstream file_css ;
     int index_mosacio = 1;
     int ph  = 0, pw = 0, iw = 0, ih = 0;
+    
     Generador_Imagen();
+    string convertir_rgb(string color1,string color2);
+    template <typename T>
+string to_string(T n) {
+    ostringstream os;
+    os << n;
+    return os.str();
+}
+
     void generar_imagen(Cubo* cubo, string filtro);
-    void generar_mosaico(Cubo* cubo);
+    string generar_mosaico(Cubo* cubo, string matriz);
 private:
 
 };

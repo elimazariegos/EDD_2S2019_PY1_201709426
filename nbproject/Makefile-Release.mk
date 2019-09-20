@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Capa.o \
 	${OBJECTDIR}/Cubo.o \
 	${OBJECTDIR}/Generador_Imagen.o \
+	${OBJECTDIR}/Generador_Repore.o \
 	${OBJECTDIR}/Lista_Filtro.o \
 	${OBJECTDIR}/Lista_String.o \
 	${OBJECTDIR}/Nodo_ABB.o \
@@ -92,6 +93,11 @@ ${OBJECTDIR}/Generador_Imagen.o: Generador_Imagen.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Generador_Imagen.o Generador_Imagen.cpp
+
+${OBJECTDIR}/Generador_Repore.o: Generador_Repore.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Generador_Repore.o Generador_Repore.cpp
 
 ${OBJECTDIR}/Lista_Filtro.o: Lista_Filtro.cpp 
 	${MKDIR} -p ${OBJECTDIR}
