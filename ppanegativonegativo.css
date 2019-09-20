@@ -17,9 +17,6 @@ height:30px;
 .pixel:nth-child(1){
 background: rgb(110,241,205);
 }
-.pixel:nth-child(2){
-background: rgb(255,255,0);
-}
 .pixel:nth-child(4){
 background: rgb(110,241,205);
 }

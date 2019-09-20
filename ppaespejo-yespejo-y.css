@@ -6,7 +6,7 @@ justify-content: center;
 align-items: center;
 }
 .canvas{
-width:120px;
+width:90px;
 height:120px;
 }
 .pixel{
@@ -17,24 +17,18 @@ height:30px;
 .pixel:nth-child(1){
 background: rgb(145,14,50);
 }
-.pixel:nth-child(4){
-background: rgb(145,14,50);
-}
 .pixel:nth-child(5){
 background: rgb(0,0,0);
 }
 .pixel:nth-child(6){
 background: rgb(0,0,0);
 }
+.pixel:nth-child(8){
+background: rgb(0,0,0);
+}
 .pixel:nth-child(9){
 background: rgb(0,0,0);
 }
 .pixel:nth-child(10){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(13){
-background: rgb(145,14,50);
-}
-.pixel:nth-child(16){
 background: rgb(145,14,50);
 }

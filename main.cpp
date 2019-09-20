@@ -18,6 +18,7 @@
 #include "Arbol_ABB.h"
 #include "Lista_String.h"
 #include "Lista_Filtro.h"
+#include "Generador_Repore.h"
 
 using namespace std;
 
@@ -198,8 +199,23 @@ void menu_reportes(){
     cout << "[************************************************]" << endl;
     cout << "BIENVENIDO AL MENU INSERTAR IMAGEN" << endl;
     cout << "[************************************************]" << endl;
+    cout << "[1] Imported Images Report" << endl;
     cout << "Seleccione una opcion" << endl;
     cout << "-->";
+    string op;
+    cin>>op;
+    int opcion = es_entero(op);
+    Generador_Repore* gr = new Generador_Repore();
+    switch(opcion){
+        case 1:
+            if(abb != 0){
+                if(abb->raiz != 0){
+                    gr->imported_image_report(abb->raiz);
+                }else{cout << "no hay imagenes" << endl;}
+            }else{cout << "no hay imagenes" << endl;}
+        break;
+    }
+    
 }
 
 
@@ -229,10 +245,13 @@ void menu_seleccionar_imagen() {
     string op;
     cin>>op;
     int opcion = es_entero(op);
-    if (opcion != -1) {
+    if (opcion > 0 and opcion <= lista_img->size) {
         imagen_seleccionada = abb->buscar(lista_img->buscar(opcion), abb->raiz)->cubo;
         cout << "[************************************************]" << endl;
         cout << "se ha seleccionado correctamente la imagen con nombre: " << lista_img->buscar(opcion) << endl;
+        lista_fitros = 0;
+    }else{
+        cout << "No se selecciono la imagen" << endl;
     }
 }
 
@@ -390,25 +409,30 @@ void menu_exportar_imagen(){
     cout << "BIENVENIDO AL SISTEMA PHOTOGEN++" << endl;
     cout << "[************************************************]" << endl;
     cout << "[1] Exportar Imagen original" << endl;
-    Nodo_Filtro* aux = lista_fitros->cabeza;
     int i = 2;
-    do{
-        
-        if(aux->capa == ""){
-            cout << "["<< i<<"]" << " Imagen Completa" <<"-"<< aux->filtro << endl;
-        
-        }else{
-            cout << "["<< i<<"] " << aux->capa <<"-"<< aux->filtro << endl;
-        
+    if(lista_fitros != 0){
+        if(!lista_fitros->esta_vacia()){
+            Nodo_Filtro* aux = lista_fitros->cabeza;
+            do{
+
+                if(aux->capa == ""){
+                    cout << "["<< i<<"]" << " Imagen Completa" <<"-"<< aux->filtro << endl;
+
+                }else{
+                    cout << "["<< i<<"] " << aux->capa <<"-"<< aux->filtro << endl;
+
+                }
+
+                aux = aux->sig;
+                if((i - 1) == lista_fitros->size){
+                    break;
+                }
+                i++;
+
+            }while(aux != lista_fitros->cabeza);
         }
-                
-        aux = aux->sig;
-        if((i - 1) == lista_fitros->size){
-            break;
-        }
-        i++;
         
-    }while(aux != lista_fitros->cabeza);
+    }
     
     cout << "[************************************************]" << endl;
     cout << "Seleccione una opcion" << endl;
@@ -420,9 +444,13 @@ void menu_exportar_imagen(){
          if(entrada == 1){
              gn->generar_imagen(imagen_seleccionada, "");
          }else{
-            Nodo_Filtro* tmp_fl =  lista_fitros->buscar(entrada - 1);
-                gn->generar_imagen(tmp_fl->cub, tmp_fl->filtro);
-            
+            if(lista_fitros != 0){
+                Nodo_Filtro* tmp_fl =  lista_fitros->buscar(entrada - 1);
+                if(tmp_fl != 0){
+                    gn->generar_imagen(tmp_fl->cub, tmp_fl->filtro);
+                }
+            }else{cout << "opcion incorrecta" << endl;}
+             
          }   
     }else{
         cout << "opcion incorrecta" << endl;
@@ -502,16 +530,14 @@ void principal() {
                 break;
             case 5:
                 if(imagen_seleccionada != 0){
-                    if(lista_fitros != 0){
                         menu_exportar_imagen();
-                    }else{
-                        cout << "No se han aplicado filtros a la imagen " << imagen_seleccionada->nombre << endl;
-                    }
+                   
                 }else{
                     cout << "No se ha seleccionado una imagen" <<endl;
                 }
                 break;
             case 6:
+                menu_reportes();
                 break;
             case 0:
                 opcion = 0;

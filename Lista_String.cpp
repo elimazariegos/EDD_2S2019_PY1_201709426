@@ -36,7 +36,7 @@ string Lista_String::buscar(int index){
     }else{
         Nodo_String* aux = cabeza;
         while(aux != 0){
-            if(aux->index = index){
+            if(aux->index == index){
                 return aux->dato;
             }
             aux = aux->sig;

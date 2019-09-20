@@ -8,6 +8,38 @@ align-items: center;
 .canvas{
 width:120px;
 height:120px;
+}.canvasM{
+width:30px;
+height:30px;
+}
+.pixelM{
+float: left;
+width:7.5px;
+height:7.5px;
+}
+.pixelM:nth-child(0){
+background: rgb(145,14,50);
+}
+.pixelM:nth-child(3){
+background: rgb(145,14,50);
+}
+.pixelM:nth-child(5){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(6){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(9){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(10){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(12){
+background: rgb(145,14,50);
+}
+.pixelM:nth-child(15){
+background: rgb(145,14,50);
 }
 .pixel{
 float: left;
