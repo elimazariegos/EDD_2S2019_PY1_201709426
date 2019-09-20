@@ -75,18 +75,7 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
     file_css << ".canvas{" << endl;
     file_css << "width:" << iw << "px;" << endl;
     file_css << "height:" << ih << "px;" << endl;
-    if(filtro == "negativo"){
-        file_css << "filter: invert(1);\n}" << endl;
-    }else if(filtro == "grises"){
-        file_css << "filter: grayscale(100%);\n}" << endl;
-    }else if(filtro == "espejo-x"){
-        file_css << "transform: scaleX(-1);\n}" << endl;
-    }else if(filtro == "espejo-y"){
-        file_css << "transform: scaleY(-1);\n}" << endl;
-    }else if(filtro == "espejo-xy"){
-        file_css << "transform: scaleX(-1);" << endl;
-        file_css << "transform: rotate(180deg);\n}" << endl;
-    }else if(filtro == "mosaico"){
+    if(filtro == "mosaico"){
         float pw_f = pw;
         float ph_f = ph;
         float mcm = cubo->columna_mayor;

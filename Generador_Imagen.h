@@ -27,6 +27,7 @@ public:
     
     Generador_Imagen();
     string convertir_rgb(string color1,string color2);
+ 
     template <typename T>
 string to_string(T n) {
     ostringstream os;

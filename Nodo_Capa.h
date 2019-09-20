@@ -19,6 +19,9 @@ public:
     Nodo_Capa* arriba = 0;
     Nodo_Capa* abajo = 0;
     int fila, columna = 0;
+    int r = 0;
+    int g = 0;
+    int b = 0;
     string color = "";
     string filtro = "";
     Nodo_Capa();

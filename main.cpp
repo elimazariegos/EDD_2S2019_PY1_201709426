@@ -254,25 +254,25 @@ void menu_aplicar_filtros(string capa){
     int opcion = es_entero(op);
     switch (opcion) {
         case 1:
-            lista_fitros->insertar_al_frente("negativo",capa);
+            lista_fitros->insertar_al_frente("negativo", capa, imagen_seleccionada);
             break;
         case 2:
-            lista_fitros->insertar_al_frente("grises",capa);
+            lista_fitros->insertar_al_frente("grises", capa,imagen_seleccionada);
             break;
         case 3:
-            lista_fitros->insertar_al_frente("espejo-x",capa);
+            lista_fitros->insertar_al_frente("espejo-x", capa, imagen_seleccionada);
             break;
         case 4:
-            lista_fitros->insertar_al_frente("espejo-y",capa);
+            lista_fitros->insertar_al_frente("espejo-y", capa, imagen_seleccionada);
             break;
         case 5:
-            lista_fitros->insertar_al_frente("espejo-xy",capa);
+            lista_fitros->insertar_al_frente("espejo-xy", capa, imagen_seleccionada);
             break;
         case 6:
-            lista_fitros->insertar_al_frente("collage",capa);
+            lista_fitros->insertar_al_frente("collage", capa, imagen_seleccionada);
             break;
         case 7:
-            lista_fitros->insertar_al_frente("mosaico",capa);
+            lista_fitros->insertar_al_frente("mosaico", capa, imagen_seleccionada);
             break;
         default:
             cout << "opcion incorrecta" <<endl;
@@ -317,15 +317,8 @@ void menu_exportar_imagen(){
              gn->generar_imagen(imagen_seleccionada, "");
          }else{
             Nodo_Filtro* tmp_fl =  lista_fitros->buscar(entrada - 1);
-            if(tmp_fl->capa == ""){
-                gn->generar_imagen(imagen_seleccionada, tmp_fl->filtro);
-            }else{
-                Cubo* cubo_aux = new Cubo(tmp_fl->capa, imagen_seleccionada->pixel_w, imagen_seleccionada->pixel_h,
-                        imagen_seleccionada->imagen_w, imagen_seleccionada->imagen_h);
-                Capa* capa_aux = imagen_seleccionada->buscar(tmp_fl->capa);
-                cubo_aux->insertar_capa(capa_aux);
-                gn->generar_imagen(cubo_aux, tmp_fl->filtro);
-            }
+                gn->generar_imagen(tmp_fl->cub, tmp_fl->filtro);
+            
          }   
     }else{
         cout << "opcion incorrecta" << endl;

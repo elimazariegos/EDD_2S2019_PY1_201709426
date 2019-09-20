@@ -10,15 +10,19 @@
 #include<iostream>
 #include<stdlib.h>
 
+#include "Nodo_Cubo.h"
+#include "Cubo.h"
+
 using namespace std;
 class Nodo_Filtro {
 public:
     string filtro = "";
     string capa = "";
+    Cubo* cub= 0;
     int index  = 0;
     Nodo_Filtro*sig;
     Nodo_Filtro*ant;
-    Nodo_Filtro(string filtro_, string capa_);
+    Nodo_Filtro(string filtro_, string capa_, Cubo * cub_);
     Nodo_Filtro();
 private:
 

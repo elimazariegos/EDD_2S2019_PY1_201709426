@@ -9,8 +9,9 @@
 
 Nodo_Filtro::Nodo_Filtro() {
 }
-Nodo_Filtro::Nodo_Filtro(string filtro_, string capa_){
+Nodo_Filtro::Nodo_Filtro(string filtro_, string capa_, Cubo* cub_){
     this->filtro = filtro_;
     this->capa = capa_;
+    this->cub = cub_;
 }
 
