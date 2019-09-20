@@ -92,10 +92,114 @@ Capa* crear_capa(string cadena, string nombre) {
     return capa;
 }
 
+Capa* modificacion(Cubo* &cubo){
+    string capa;
+    string op;
+    Capa* capa_buscada = 0;
+    int x = 0;
+    int y = 0;
+    int r = 0;
+    int g = 0;
+    int b = 0;
+    
+    cout << "ingrese el nombre de la capa" << endl;
+    cout << "-->";
+    cin>>capa;
+    capa_buscada = cubo->buscar(capa);
+    if(capa_buscada != 0){
+        cout << "ingrese la coordenada en x" << endl;
+        cin>>op;
+        x = es_entero(op);
+        if(x>0 and x<cubo->columna_mayor){
+            cout << "ingrese la coordenada en y" << endl;
+            cin>>op;
+            y = es_entero(op);
+            if(y > 0  and y < cubo->fila_mayor){
+                cout << "ingrese el valor de r" << endl;
+                cin>>op;
+                r = es_entero(op);
+                if(r >= 0){
+                    cout << "ingrese el valor de g" << endl;
+                    cin>>op;
+                    g = es_entero(op);
+                    if(g >= 0){
+                        cout << "ingrese el valor de b" << endl;
+                        cin>>op;
+                        r = es_entero(op);
+                        if(r >= 0){
+                            cubo->modificar(x,y,capa,r,g,b);
+                            
+                        }else{cout << "el numero b no esta en el rango 0 <= r < 255" <<endl;}
+                    }else{cout << "el numero g no esta en el rango 0 <= r < 255" <<endl;}
+                }else{cout << "el numero r no esta en el rango 0 <= r < 255" <<endl;}
+            }else{cout << "no existe la posicion en y" <<endl;}
+        }else{cout << "no existe la posicion en x" <<endl;}
+
+    }else{cout << "No existe la capa" <<endl;}
+
+}
+
+void menu_edicion_manual(){
+    cout << "\n[************************************************]" << endl;
+    cout << "BIENVENIDO AL MENU EDICION MANUAL" << endl;
+    cout << "[************************************************]" << endl;
+    cout << "[1] Imagen Original" << endl;
+    cout << "[2] Imagen con Filtro" << endl;
+    cout << "Seleccione una opcion" << endl;
+    cout << "-->";
+    string op;
+    cin>>op;
+    int opcion = es_entero(op);
+    if(opcion == 1){
+        modificacion(imagen_seleccionada);
+    }else if(opcion == 2){
+        Nodo_Filtro* aux = lista_fitros->cabeza;
+        int i = 1;
+        do{
+
+            if(aux->filtro != "mosaico" and aux->filtro != "collage"){
+                if(aux->capa == ""){
+                    cout << "["<< i<<"]" << " Imagen Completa" <<"-"<< aux->filtro << endl;
+
+                }else{
+                    cout << "["<< i<<"] " << aux->capa <<"-"<< aux->filtro << endl;
+
+                }
+
+            }
+            
+            aux = aux->sig;
+            if(i  == lista_fitros->size){
+                break;
+            }
+            i++;
+
+        }while(aux != lista_fitros->cabeza);
+
+        cout << "[************************************************]" << endl;
+        cout << "Seleccione una opcion" << endl;
+        cout << "-->";
+        cin>>op;
+        int entrada = es_entero(op);
+        if(entrada > 0){
+            Nodo_Filtro* tmp_fl =  lista_fitros->buscar(entrada - 1);
+            if(tmp_fl != 0){
+                modificacion(tmp_fl->cub);
+            }else{
+                cout << "opcion incorrecta" <<endl;
+            }
+        }
+
+
+    }
+}
+
 void menu_reportes(){
     cout << "[************************************************]" << endl;
     cout << "BIENVENIDO AL MENU INSERTAR IMAGEN" << endl;
     cout << "[************************************************]" << endl;
+    cout << "Seleccione una opcion" << endl;
+    cout << "-->";
 }
 
 
@@ -384,9 +488,17 @@ void principal() {
                     }else{
                         cout << "opcion incorrecta" << endl;
                     }
+                }else {
+                    cout << "No se ha seleccionado una imagen" <<endl;
                 }
                 break;
             case 4:
+                if(imagen_seleccionada != 0){
+                    menu_edicion_manual();
+                }else {
+                    cout << "No se ha seleccionado una imagen" <<endl;
+
+                }
                 break;
             case 5:
                 if(imagen_seleccionada != 0){

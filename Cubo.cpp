@@ -57,7 +57,7 @@ Capa* Cubo::buscar(string nombre){
         }
     }
 }
-void Cubo::modificar(int x, int y, string capa, string color, string filtro){
+void Cubo::modificar(int x, int y, string capa, int r, int g, int b){
     if(esta_vacia()){}
     else{
         Nodo_Cubo* aux = cabeza;
@@ -68,11 +68,10 @@ void Cubo::modificar(int x, int y, string capa, string color, string filtro){
                 while(aux_sg != 0){
                     if(aux->capa->nombre == capa){
                         if(aux_sg->fila == y and aux_sg->columna == x){
-                            if(color != ""){
-                                aux_sg->color = color;
-                            }else if(filtro != ""){
-                                aux_sg->filtro = filtro;
-                            }
+                            aux_sg->r = r;
+                            aux_sg->g = g;
+                            aux_sg->b = b;
+                            aux_sg->color = to_string(r) + "," + to_string(g) + "," + to_string(b);
                         }
                     }
                     aux_sg = aux_sg->sig;

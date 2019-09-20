@@ -18,7 +18,7 @@ Lista_Filtro::Lista_Filtro(Cubo* cubo_) {
 bool Lista_Filtro::esta_vacia(){return cabeza == 0;}
 
 Capa* Lista_Filtro::filtro_esp_x(Capa* capa){
-    Capa* nueva = new Capa(capa->nombre + "esp_x");
+    Capa* nueva = new Capa(capa->nombre);
     Nodo_Capa* aux = capa->cabecera->abajo->sig;
     while(aux->sig != 0){
         aux = aux->sig;
@@ -39,7 +39,7 @@ Capa* Lista_Filtro::filtro_esp_x(Capa* capa){
     return nueva;
 }
 Capa* Lista_Filtro::filtro_esp_y(Capa* capa){
-    Capa* nueva = new Capa(capa->nombre + "esp_y");
+    Capa* nueva = new Capa(capa->nombre);
     Nodo_Capa* aux = capa->cabecera->abajo->sig;
     while(aux->abajo != 0){
         aux = aux->abajo;
@@ -61,7 +61,7 @@ Capa* Lista_Filtro::filtro_esp_y(Capa* capa){
 }
 
 Capa* Lista_Filtro::filtro_bn(Capa* capa) {
-    Capa* nueva = new Capa(capa->nombre + "grises");
+    Capa* nueva = new Capa(capa->nombre);
     Nodo_Capa* aux = capa->cabecera->abajo;
     int y = 1;
     int x = 1;
@@ -89,7 +89,7 @@ Capa* Lista_Filtro::filtro_bn(Capa* capa) {
     return nueva;
 }
 Capa* Lista_Filtro::filtro_neg(Capa* capa){
-    Capa* nueva = new Capa(capa->nombre + "negativo");
+    Capa* nueva = new Capa(capa->nombre);
     Nodo_Capa* aux = capa->cabecera->abajo;
     int y = 1;
     int x = 1;

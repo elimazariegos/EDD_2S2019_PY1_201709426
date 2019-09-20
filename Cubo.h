@@ -10,6 +10,12 @@
 
 #include "Nodo_Cubo.h"
 
+#include<iostream>
+#include<fstream>
+#include<stdlib.h>
+#include<windows.h>
+#include<sstream>
+#include<string>
 using namespace std;
 class Cubo {
 public:
@@ -27,9 +33,15 @@ public:
     bool esta_vacia();
     void insertar_capa(Capa* capa_);
     Capa* buscar(string nombre);
-    void modificar(int x, int y, string capa, string color, string filtro);
+    void modificar(int x, int y, string capa, int r, int g, int b);
     
-   
+   template <typename T>
+    string to_string(T n) {
+        ostringstream os;
+        os << n;
+        return os.str();
+    }
+    
     
 private:
 
