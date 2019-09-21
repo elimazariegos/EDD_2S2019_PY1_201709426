@@ -15,7 +15,7 @@ class Nodo_Cubo {
 public:
     Capa* capa;
     Nodo_Cubo* sig;
-    int pos_z;
+    int index = 0;
     Nodo_Cubo();
     Nodo_Cubo(Capa* capa_);
 private:

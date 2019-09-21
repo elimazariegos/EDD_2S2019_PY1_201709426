@@ -102,7 +102,6 @@ Capa* Lista_Filtro::filtro_neg(Capa* capa){
             }else{
                 color = "x";
             } 
-            
             nueva->insertar_nodo(y,x,color);
             aux_c = aux_c->sig;
             x++;

@@ -16,7 +16,7 @@ public:
     Generador_Repore();
     void imported_image_report(Nodo_ABB* tmp);
     void recorrer_arbol_imagen(Nodo_ABB* tmp);
-
+    void generar_capa(Nodo_Capa* tmp);
     template <typename T>
     string to_string(T n) {
         ostringstream os;

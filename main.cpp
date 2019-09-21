@@ -32,6 +32,15 @@ Lista_String* lista_img = new Lista_String();
 Generador_Imagen* gn = new Generador_Imagen();
 Lista_Filtro* lista_fitros = 0;
 
+
+void llenar_lista_img(Nodo_ABB * tmp) {
+    if (tmp != 0) {
+        llenar_lista_img(tmp->izquierdo);
+        lista_img->insertar(tmp->cubo->nombre);
+        llenar_lista_img(tmp->derecho);
+    }
+}
+
 int es_entero(string ent) {
     int i = 0;
     string aux = "";
@@ -47,7 +56,7 @@ int es_entero(string ent) {
     return i;
 }
 
-    string abrir_archivo(string direccion) {
+string abrir_archivo(string direccion) {
         string cadena = "";
         ifstream fe(direccion);
         if (fe.good()) {
@@ -83,7 +92,7 @@ Capa* crear_capa(string cadena, string nombre) {
             if (cadena[i] == ',') {
                 i++;
             }
-            capa->insertar_nodo(y, x, color);
+                capa->insertar_nodo(y, x, color);
             x++;
             color = "";
         }
@@ -200,6 +209,8 @@ void menu_reportes(){
     cout << "BIENVENIDO AL MENU INSERTAR IMAGEN" << endl;
     cout << "[************************************************]" << endl;
     cout << "[1] Imported Images Report" << endl;
+    cout << "[2] Image Layer Report" << endl;
+    cout << "[3] Lineal Matrix Report"
     cout << "Seleccione una opcion" << endl;
     cout << "-->";
     string op;
@@ -214,20 +225,51 @@ void menu_reportes(){
                 }else{cout << "no hay imagenes" << endl;}
             }else{cout << "no hay imagenes" << endl;}
         break;
+        case 2:
+            lista_img = new Lista_String();
+            llenar_lista_img(abb->raiz);
+            cout << "[************************************************]" << endl;
+            cout << "BIENVENIDO AL MENU SELECCIONAR IMAGEN" << endl;
+            cout << "[************************************************]" << endl;
+            for (int i = 1; i <= lista_img->size; i++) {
+                cout << "[" << i << "] " << lista_img->buscar(i) << endl;
+            }
+            cout << "[************************************************]" << endl;
+            cout << "Seleccione una opcion" << endl;
+            cout << "-->";
+            string op;
+            cin>>op;
+            int opcion = es_entero(op);
+            if (opcion > 0 and opcion <= lista_img->size) {
+                Cubo* img_report = abb->buscar(lista_img->buscar(opcion), abb->raiz)->cubo;
+                cout << "[************************************************]" << endl;
+                if(img_report != 0){
+                    cout << "Imagen: " << img_report->nombre << endl;
+                    Nodo_Cubo* aux_c = img_report->cabeza;
+                    
+                    int i = 1;
+                    while(aux_c != 0){
+                        cout << "[" << i << "] " << aux_c->capa->nombre << endl;
+                        i++;
+                        aux_c = aux_c->sig;
+                    }
+                    cout << "Seleccione una capa" <<endl;
+                    cin>>op;
+                    int capa_select = es_entero(op);
+                    if(capa_select > 0){
+                        Capa* busqueda = img_report->buscar_index(capa_select);
+                        if(busqueda != 0){
+                            gr->generar_capa(busqueda->cabecera);
+                        }
+                    }
+                }
+            }else{
+                cout << "No se selecciono la imagen" << endl;
+            }
+        break;
     }
     
 }
-
-
-
-void llenar_lista_img(Nodo_ABB * tmp) {
-    if (tmp != 0) {
-        llenar_lista_img(tmp->izquierdo);
-        lista_img->insertar(tmp->cubo->nombre);
-        llenar_lista_img(tmp->derecho);
-    }
-}
-
 
 
 void menu_seleccionar_imagen() {
@@ -456,6 +498,7 @@ void menu_exportar_imagen(){
         cout << "opcion incorrecta" << endl;
     }
 }
+
 void principal() {
     int opcion = -1;
     while (opcion != 0) {

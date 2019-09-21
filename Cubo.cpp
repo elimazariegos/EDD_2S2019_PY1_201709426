@@ -22,6 +22,7 @@ bool Cubo::esta_vacia(){return cabeza == 0;}
 
 void Cubo::insertar_capa(Capa* capa_){
     Nodo_Cubo* nuevo = new Nodo_Cubo(capa_);
+    nuevo->index = size + 1;
     if(esta_vacia()){
         cabeza = nuevo;
         cabeza->sig = 0;
@@ -57,6 +58,19 @@ Capa* Cubo::buscar(string nombre){
         }
     }
 }
+Capa* Cubo::buscar_index(int index_){
+    if(esta_vacia()){return 0;}
+    else{
+        Nodo_Cubo* aux = cabeza;
+        while(aux != 0){
+            if(aux->index == index_){
+                return aux->capa;
+            }
+            aux = aux->sig;
+        }
+    }
+}
+
 void Cubo::modificar(int x, int y, string capa, int r, int g, int b){
     if(esta_vacia()){}
     else{

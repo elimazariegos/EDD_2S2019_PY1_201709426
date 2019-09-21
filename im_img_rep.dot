@@ -1,7 +1,5 @@
 digraph g{
 node [shape = record, heigth=.1];
-capainicial[label= "<f0>|<f1>inicial|<f2>"];
-"capainicial":f2 -> "capappa":f1;
-capappa[label= "<f0>|<f1>ppa|<f2>"];
+capaarchivo[label= "<f0>|<f1>archivo|<f2>"];
 
 }

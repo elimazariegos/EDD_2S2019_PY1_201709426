@@ -33,6 +33,7 @@ public:
     bool esta_vacia();
     void insertar_capa(Capa* capa_);
     Capa* buscar(string nombre);
+    Capa* buscar_index(int index_);
     void modificar(int x, int y, string capa, int r, int g, int b);
     
    template <typename T>

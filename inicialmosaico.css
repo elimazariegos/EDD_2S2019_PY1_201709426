@@ -6,7 +6,7 @@ justify-content: center;
 align-items: center;
 }
 .canvas{
-width:570px;
+width:510px;
 height:510px;
 }.canvasM{
 width:30px;
@@ -14,8 +14,14 @@ height:30px;
 }
 .pixelM{
 float: left;
-width:1.57895px;
+width:1.76471px;
 height:1.76471px;
+}
+.pixelM:nth-child(24){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(25){
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(26){
 background: rgb(0,0,0);
@@ -23,239 +29,272 @@ background: rgb(0,0,0);
 .pixelM:nth-child(27){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(28){
+.pixelM:nth-child(39){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(29){
+.pixelM:nth-child(40){
 background: rgb(0,0,0);
+}
+.pixelM:nth-child(41){
+background: rgb(0,77,153);
+}
+.pixelM:nth-child(42){
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(43){
-background: rgb(0,0,0);
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(44){
-background: rgb(0,0,0);
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(45){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(46){
-background: rgb(0,77,153);
-}
-.pixelM:nth-child(47){
-background: rgb(0,77,153);
-}
-.pixelM:nth-child(48){
-background: rgb(0,77,153);
-}
-.pixelM:nth-child(49){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(50){
+.pixelM:nth-child(55){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(61){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(62){
+.pixelM:nth-child(56){
 background: rgb(0,77,153);
 }
-.pixelM:nth-child(63){
+.pixelM:nth-child(57){
 background: rgb(0,77,154);
 }
-.pixelM:nth-child(64){
+.pixelM:nth-child(58){
 background: rgb(0,77,155);
 }
-.pixelM:nth-child(65){
+.pixelM:nth-child(59){
 background: rgb(0,77,156);
 }
-.pixelM:nth-child(66){
+.pixelM:nth-child(60){
 background: rgb(0,77,157);
 }
-.pixelM:nth-child(67){
+.pixelM:nth-child(61){
 background: rgb(0,77,158);
 }
-.pixelM:nth-child(68){
+.pixelM:nth-child(62){
 background: rgb(0,77,159);
 }
-.pixelM:nth-child(69){
+.pixelM:nth-child(63){
 background: rgb(0,77,153);
 }
-.pixelM:nth-child(70){
+.pixelM:nth-child(64){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(79){
+.pixelM:nth-child(71){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(80){
+.pixelM:nth-child(72){
 background: rgb(0,77,152);
 }
-.pixelM:nth-child(81){
+.pixelM:nth-child(73){
 background: rgb(153,206,255);
 }
-.pixelM:nth-child(82){
+.pixelM:nth-child(74){
 background: rgb(153,206,256);
 }
-.pixelM:nth-child(83){
+.pixelM:nth-child(75){
 background: rgb(153,206,257);
 }
-.pixelM:nth-child(84){
+.pixelM:nth-child(76){
 background: rgb(153,206,258);
 }
-.pixelM:nth-child(85){
+.pixelM:nth-child(77){
 background: rgb(153,206,259);
 }
-.pixelM:nth-child(86){
+.pixelM:nth-child(78){
 background: rgb(153,206,260);
 }
-.pixelM:nth-child(87){
+.pixelM:nth-child(79){
 background: rgb(153,206,261);
 }
-.pixelM:nth-child(88){
+.pixelM:nth-child(80){
 background: rgb(153,206,262);
+}
+.pixelM:nth-child(81){
+background: rgb(0,77,153);
+}
+.pixelM:nth-child(82){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(88){
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(89){
 background: rgb(0,77,153);
 }
 .pixelM:nth-child(90){
-background: rgb(0,0,0);
+background: rgb(153,206,255);
+}
+.pixelM:nth-child(91){
+background: rgb(153,206,256);
+}
+.pixelM:nth-child(92){
+background: rgb(153,206,257);
+}
+.pixelM:nth-child(93){
+background: rgb(153,206,258);
+}
+.pixelM:nth-child(94){
+background: rgb(153,206,259);
+}
+.pixelM:nth-child(95){
+background: rgb(153,206,260);
+}
+.pixelM:nth-child(96){
+background: rgb(153,206,261);
+}
+.pixelM:nth-child(97){
+background: rgb(153,206,262);
 }
 .pixelM:nth-child(98){
-background: rgb(0,0,0);
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(99){
-background: rgb(0,77,153);
-}
-.pixelM:nth-child(100){
-background: rgb(153,206,255);
-}
-.pixelM:nth-child(101){
-background: rgb(153,206,256);
-}
-.pixelM:nth-child(102){
-background: rgb(153,206,257);
-}
-.pixelM:nth-child(103){
-background: rgb(153,206,258);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(104){
-background: rgb(153,206,259);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(105){
-background: rgb(153,206,260);
-}
-.pixelM:nth-child(106){
-background: rgb(153,206,261);
-}
-.pixelM:nth-child(107){
-background: rgb(153,206,262);
-}
-.pixelM:nth-child(108){
-background: rgb(0,77,153);
-}
-.pixelM:nth-child(109){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(116){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(117){
 background: rgb(0,77,148);
 }
-.pixelM:nth-child(118){
+.pixelM:nth-child(106){
 background: rgb(153,206,255);
 }
-.pixelM:nth-child(119){
+.pixelM:nth-child(107){
 background: rgb(153,206,255);
 }
-.pixelM:nth-child(120){
+.pixelM:nth-child(108){
 background: rgb(153,206,256);
 }
-.pixelM:nth-child(121){
+.pixelM:nth-child(109){
 background: rgb(153,206,257);
 }
-.pixelM:nth-child(122){
+.pixelM:nth-child(110){
 background: rgb(153,206,258);
 }
-.pixelM:nth-child(123){
+.pixelM:nth-child(111){
 background: rgb(153,206,259);
 }
-.pixelM:nth-child(124){
+.pixelM:nth-child(112){
 background: rgb(153,206,260);
 }
-.pixelM:nth-child(125){
+.pixelM:nth-child(113){
 background: rgb(153,206,261);
 }
-.pixelM:nth-child(126){
+.pixelM:nth-child(114){
 background: rgb(153,206,262);
 }
-.pixelM:nth-child(127){
+.pixelM:nth-child(115){
 background: rgb(153,206,263);
 }
-.pixelM:nth-child(128){
+.pixelM:nth-child(116){
 background: rgb(0,77,153);
 }
-.pixelM:nth-child(129){
+.pixelM:nth-child(117){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(135){
+.pixelM:nth-child(121){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(136){
+.pixelM:nth-child(122){
 background: rgb(0,77,149);
 }
-.pixelM:nth-child(137){
+.pixelM:nth-child(123){
 background: rgb(153,206,255);
 }
-.pixelM:nth-child(138){
+.pixelM:nth-child(124){
 background: rgb(153,206,255);
 }
-.pixelM:nth-child(139){
+.pixelM:nth-child(125){
 background: rgb(255,255,255);
 }
+.pixelM:nth-child(126){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(129){
+background: rgb(255,255,255);
+}
+.pixelM:nth-child(130){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(131){
+background: rgb(153,206,263);
+}
+.pixelM:nth-child(132){
+background: rgb(153,206,264);
+}
+.pixelM:nth-child(133){
+background: rgb(0,77,153);
+}
+.pixelM:nth-child(134){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(138){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(139){
+background: rgb(0,77,150);
+}
 .pixelM:nth-child(140){
+background: rgb(153,206,255);
+}
+.pixelM:nth-child(141){
+background: rgb(153,206,255);
+}
+.pixelM:nth-child(142){
 background: rgb(0,0,0);
 }
 .pixelM:nth-child(143){
-background: rgb(255,255,255);
-}
-.pixelM:nth-child(144){
 background: rgb(0,0,0);
-}
-.pixelM:nth-child(145){
-background: rgb(153,206,263);
 }
 .pixelM:nth-child(146){
-background: rgb(153,206,264);
-}
-.pixelM:nth-child(147){
-background: rgb(0,77,153);
-}
-.pixelM:nth-child(148){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(154){
+.pixelM:nth-child(147){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(148){
+background: rgb(153,206,264);
+}
+.pixelM:nth-child(149){
+background: rgb(153,206,265);
+}
+.pixelM:nth-child(150){
+background: rgb(0,77,153);
+}
+.pixelM:nth-child(151){
 background: rgb(0,0,0);
 }
 .pixelM:nth-child(155){
-background: rgb(0,77,150);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(156){
-background: rgb(153,206,255);
+background: rgb(0,77,151);
 }
 .pixelM:nth-child(157){
 background: rgb(153,206,255);
 }
 .pixelM:nth-child(158){
-background: rgb(0,0,0);
+background: rgb(153,206,255);
 }
 .pixelM:nth-child(159){
-background: rgb(0,0,0);
+background: rgb(153,206,264);
+}
+.pixelM:nth-child(160){
+background: rgb(230,138,0);
+}
+.pixelM:nth-child(161){
+background: rgb(230,138,0);
 }
 .pixelM:nth-child(162){
-background: rgb(0,0,0);
+background: rgb(230,138,0);
 }
 .pixelM:nth-child(163){
-background: rgb(0,0,0);
+background: rgb(230,138,0);
 }
 .pixelM:nth-child(164){
 background: rgb(153,206,264);
@@ -264,22 +303,31 @@ background: rgb(153,206,264);
 background: rgb(153,206,265);
 }
 .pixelM:nth-child(166){
-background: rgb(0,77,153);
+background: rgb(153,206,266);
 }
 .pixelM:nth-child(167){
+background: rgb(0,77,153);
+}
+.pixelM:nth-child(168){
 background: rgb(0,0,0);
+}
+.pixelM:nth-child(171){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(172){
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(173){
-background: rgb(0,0,0);
+background: rgb(0,77,152);
 }
 .pixelM:nth-child(174){
-background: rgb(0,77,151);
+background: rgb(153,206,255);
 }
 .pixelM:nth-child(175){
 background: rgb(153,206,255);
 }
 .pixelM:nth-child(176){
-background: rgb(153,206,255);
+background: rgb(153,206,264);
 }
 .pixelM:nth-child(177){
 background: rgb(153,206,264);
@@ -291,270 +339,213 @@ background: rgb(230,138,0);
 background: rgb(230,138,0);
 }
 .pixelM:nth-child(180){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(181){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(182){
 background: rgb(153,206,264);
 }
+.pixelM:nth-child(181){
+background: rgb(153,206,264);
+}
+.pixelM:nth-child(182){
+background: rgb(153,206,266);
+}
 .pixelM:nth-child(183){
-background: rgb(153,206,265);
+background: rgb(153,206,267);
 }
 .pixelM:nth-child(184){
-background: rgb(153,206,266);
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(185){
 background: rgb(0,77,153);
 }
-.pixelM:nth-child(186){
+.pixelM:nth-child(188){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(191){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(192){
+.pixelM:nth-child(189){
 background: rgb(0,77,153);
 }
+.pixelM:nth-child(190){
+background: rgb(0,77,153);
+}
+.pixelM:nth-child(191){
+background: rgb(153,206,255);
+}
+.pixelM:nth-child(192){
+background: rgb(255,255,255);
+}
 .pixelM:nth-child(193){
-background: rgb(0,77,152);
+background: rgb(255,255,255);
 }
 .pixelM:nth-child(194){
-background: rgb(153,206,255);
+background: rgb(255,255,255);
 }
 .pixelM:nth-child(195){
-background: rgb(153,206,255);
+background: rgb(255,255,255);
 }
 .pixelM:nth-child(196){
-background: rgb(153,206,264);
+background: rgb(255,255,255);
 }
 .pixelM:nth-child(197){
-background: rgb(153,206,264);
+background: rgb(255,255,255);
 }
 .pixelM:nth-child(198){
-background: rgb(230,138,0);
+background: rgb(255,255,255);
 }
 .pixelM:nth-child(199){
-background: rgb(230,138,0);
+background: rgb(255,255,255);
 }
 .pixelM:nth-child(200){
-background: rgb(153,206,264);
+background: rgb(153,206,268);
 }
 .pixelM:nth-child(201){
-background: rgb(153,206,264);
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(202){
-background: rgb(153,206,266);
-}
-.pixelM:nth-child(203){
-background: rgb(153,206,267);
-}
-.pixelM:nth-child(204){
 background: rgb(0,77,153);
 }
 .pixelM:nth-child(205){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(206){
+background: rgb(0,77,153);
+}
+.pixelM:nth-child(207){
 background: rgb(0,0,0);
+}
+.pixelM:nth-child(208){
+background: rgb(255,255,255);
+}
+.pixelM:nth-child(209){
+background: rgb(255,255,256);
 }
 .pixelM:nth-child(210){
-background: rgb(0,0,0);
+background: rgb(255,255,257);
 }
 .pixelM:nth-child(211){
-background: rgb(0,77,153);
+background: rgb(255,255,258);
 }
 .pixelM:nth-child(212){
-background: rgb(0,77,153);
+background: rgb(255,255,259);
 }
 .pixelM:nth-child(213){
-background: rgb(153,206,255);
+background: rgb(255,255,260);
 }
 .pixelM:nth-child(214){
-background: rgb(255,255,255);
+background: rgb(255,255,261);
 }
 .pixelM:nth-child(215){
-background: rgb(255,255,255);
+background: rgb(255,255,262);
 }
 .pixelM:nth-child(216){
-background: rgb(255,255,255);
+background: rgb(255,255,263);
 }
 .pixelM:nth-child(217){
-background: rgb(255,255,255);
+background: rgb(255,255,264);
 }
 .pixelM:nth-child(218){
-background: rgb(255,255,255);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(219){
-background: rgb(255,255,255);
-}
-.pixelM:nth-child(220){
-background: rgb(255,255,255);
-}
-.pixelM:nth-child(221){
-background: rgb(255,255,255);
-}
-.pixelM:nth-child(222){
-background: rgb(153,206,268);
+background: rgb(0,77,153);
 }
 .pixelM:nth-child(223){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(224){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(225){
-background: rgb(0,0,0);
+background: rgb(255,255,255);
+}
+.pixelM:nth-child(226){
+background: rgb(255,255,256);
+}
+.pixelM:nth-child(227){
+background: rgb(255,255,257);
+}
+.pixelM:nth-child(228){
+background: rgb(255,255,258);
 }
 .pixelM:nth-child(229){
-background: rgb(0,0,0);
+background: rgb(255,255,259);
 }
 .pixelM:nth-child(230){
-background: rgb(0,77,153);
+background: rgb(255,255,260);
 }
 .pixelM:nth-child(231){
-background: rgb(0,0,0);
+background: rgb(255,255,261);
 }
 .pixelM:nth-child(232){
-background: rgb(255,255,255);
+background: rgb(255,255,262);
 }
 .pixelM:nth-child(233){
-background: rgb(255,255,256);
+background: rgb(255,255,263);
 }
 .pixelM:nth-child(234){
-background: rgb(255,255,257);
+background: rgb(255,255,264);
 }
 .pixelM:nth-child(235){
-background: rgb(255,255,258);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(236){
-background: rgb(255,255,259);
-}
-.pixelM:nth-child(237){
-background: rgb(255,255,260);
-}
-.pixelM:nth-child(238){
-background: rgb(255,255,261);
-}
-.pixelM:nth-child(239){
-background: rgb(255,255,262);
-}
-.pixelM:nth-child(240){
-background: rgb(255,255,263);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(241){
-background: rgb(255,255,264);
-}
-.pixelM:nth-child(242){
 background: rgb(0,0,0);
-}
-.pixelM:nth-child(243){
-background: rgb(0,77,153);
-}
-.pixelM:nth-child(244){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(249){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(250){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(251){
-background: rgb(255,255,255);
 }
 .pixelM:nth-child(252){
-background: rgb(255,255,256);
-}
-.pixelM:nth-child(253){
-background: rgb(255,255,257);
-}
-.pixelM:nth-child(254){
-background: rgb(255,255,258);
-}
-.pixelM:nth-child(255){
-background: rgb(255,255,259);
-}
-.pixelM:nth-child(256){
-background: rgb(255,255,260);
-}
-.pixelM:nth-child(257){
-background: rgb(255,255,261);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(258){
-background: rgb(255,255,262);
+background: rgb(0,0,0);
 }
 .pixelM:nth-child(259){
-background: rgb(255,255,263);
+background: rgb(230,138,0);
 }
 .pixelM:nth-child(260){
-background: rgb(255,255,264);
+background: rgb(230,138,0);
 }
 .pixelM:nth-child(261){
-background: rgb(0,0,0);
+background: rgb(230,138,0);
 }
 .pixelM:nth-child(262){
 background: rgb(0,0,0);
 }
+.pixelM:nth-child(263){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(264){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(265){
+background: rgb(0,0,0);
+}
+.pixelM:nth-child(266){
+background: rgb(230,138,0);
+}
+.pixelM:nth-child(267){
+background: rgb(230,138,0);
+}
+.pixelM:nth-child(268){
+background: rgb(230,138,0);
+}
 .pixelM:nth-child(269){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(280){
+.pixelM:nth-child(276){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(288){
+.pixelM:nth-child(277){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(289){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(290){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(291){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(292){
+.pixelM:nth-child(278){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(293){
+.pixelM:nth-child(283){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(294){
+.pixelM:nth-child(284){
 background: rgb(0,0,0);
 }
-.pixelM:nth-child(295){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(296){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(297){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(298){
-background: rgb(230,138,0);
-}
-.pixelM:nth-child(299){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(308){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(309){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(310){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(315){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(316){
-background: rgb(0,0,0);
-}
-.pixelM:nth-child(317){
+.pixelM:nth-child(285){
 background: rgb(0,0,0);
 }
 .pixel{
@@ -562,245 +553,284 @@ float: left;
 width:30px;
 height:30px;
 }
+.pixel:nth-child(25){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(26){
+background: rgb(0,0,0);
+}
 .pixel:nth-child(27){
 background: rgb(0,0,0);
 }
 .pixel:nth-child(28){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(29){
+.pixel:nth-child(40){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(30){
+.pixel:nth-child(41){
 background: rgb(0,0,0);
+}
+.pixel:nth-child(42){
+background: rgb(0,77,153);
+}
+.pixel:nth-child(43){
+background: rgb(0,77,153);
 }
 .pixel:nth-child(44){
-background: rgb(0,0,0);
+background: rgb(0,77,153);
 }
 .pixel:nth-child(45){
-background: rgb(0,0,0);
+background: rgb(0,77,153);
 }
 .pixel:nth-child(46){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(47){
-background: rgb(0,77,153);
-}
-.pixel:nth-child(48){
-background: rgb(0,77,153);
-}
-.pixel:nth-child(49){
-background: rgb(0,77,153);
-}
-.pixel:nth-child(50){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(51){
+.pixel:nth-child(56){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(62){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(63){
+.pixel:nth-child(57){
 background: rgb(0,77,153);
 }
-.pixel:nth-child(64){
+.pixel:nth-child(58){
 background: rgb(0,77,154);
 }
-.pixel:nth-child(65){
+.pixel:nth-child(59){
 background: rgb(0,77,155);
 }
-.pixel:nth-child(66){
+.pixel:nth-child(60){
 background: rgb(0,77,156);
 }
-.pixel:nth-child(67){
+.pixel:nth-child(61){
 background: rgb(0,77,157);
 }
-.pixel:nth-child(68){
+.pixel:nth-child(62){
 background: rgb(0,77,158);
 }
-.pixel:nth-child(69){
+.pixel:nth-child(63){
 background: rgb(0,77,159);
 }
-.pixel:nth-child(70){
+.pixel:nth-child(64){
 background: rgb(0,77,153);
 }
-.pixel:nth-child(71){
+.pixel:nth-child(65){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(80){
+.pixel:nth-child(72){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(81){
+.pixel:nth-child(73){
 background: rgb(0,77,152);
 }
-.pixel:nth-child(82){
+.pixel:nth-child(74){
 background: rgb(153,206,255);
 }
-.pixel:nth-child(83){
+.pixel:nth-child(75){
 background: rgb(153,206,256);
 }
-.pixel:nth-child(84){
+.pixel:nth-child(76){
 background: rgb(153,206,257);
 }
-.pixel:nth-child(85){
+.pixel:nth-child(77){
 background: rgb(153,206,258);
 }
-.pixel:nth-child(86){
+.pixel:nth-child(78){
 background: rgb(153,206,259);
 }
-.pixel:nth-child(87){
+.pixel:nth-child(79){
 background: rgb(153,206,260);
 }
-.pixel:nth-child(88){
+.pixel:nth-child(80){
 background: rgb(153,206,261);
 }
-.pixel:nth-child(89){
+.pixel:nth-child(81){
 background: rgb(153,206,262);
+}
+.pixel:nth-child(82){
+background: rgb(0,77,153);
+}
+.pixel:nth-child(83){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(89){
+background: rgb(0,0,0);
 }
 .pixel:nth-child(90){
 background: rgb(0,77,153);
 }
 .pixel:nth-child(91){
-background: rgb(0,0,0);
+background: rgb(153,206,255);
+}
+.pixel:nth-child(92){
+background: rgb(153,206,256);
+}
+.pixel:nth-child(93){
+background: rgb(153,206,257);
+}
+.pixel:nth-child(94){
+background: rgb(153,206,258);
+}
+.pixel:nth-child(95){
+background: rgb(153,206,259);
+}
+.pixel:nth-child(96){
+background: rgb(153,206,260);
+}
+.pixel:nth-child(97){
+background: rgb(153,206,261);
+}
+.pixel:nth-child(98){
+background: rgb(153,206,262);
 }
 .pixel:nth-child(99){
-background: rgb(0,0,0);
+background: rgb(0,77,153);
 }
 .pixel:nth-child(100){
-background: rgb(0,77,153);
-}
-.pixel:nth-child(101){
-background: rgb(153,206,255);
-}
-.pixel:nth-child(102){
-background: rgb(153,206,256);
-}
-.pixel:nth-child(103){
-background: rgb(153,206,257);
-}
-.pixel:nth-child(104){
-background: rgb(153,206,258);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(105){
-background: rgb(153,206,259);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(106){
-background: rgb(153,206,260);
-}
-.pixel:nth-child(107){
-background: rgb(153,206,261);
-}
-.pixel:nth-child(108){
-background: rgb(153,206,262);
-}
-.pixel:nth-child(109){
-background: rgb(0,77,153);
-}
-.pixel:nth-child(110){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(117){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(118){
 background: rgb(0,77,148);
 }
-.pixel:nth-child(119){
+.pixel:nth-child(107){
 background: rgb(153,206,255);
 }
-.pixel:nth-child(120){
+.pixel:nth-child(108){
 background: rgb(153,206,255);
 }
-.pixel:nth-child(121){
+.pixel:nth-child(109){
 background: rgb(153,206,256);
 }
-.pixel:nth-child(122){
+.pixel:nth-child(110){
 background: rgb(153,206,257);
 }
-.pixel:nth-child(123){
+.pixel:nth-child(111){
 background: rgb(153,206,258);
 }
-.pixel:nth-child(124){
+.pixel:nth-child(112){
 background: rgb(153,206,259);
 }
-.pixel:nth-child(125){
+.pixel:nth-child(113){
 background: rgb(153,206,260);
 }
-.pixel:nth-child(126){
+.pixel:nth-child(114){
 background: rgb(153,206,261);
 }
-.pixel:nth-child(127){
+.pixel:nth-child(115){
 background: rgb(153,206,262);
 }
-.pixel:nth-child(128){
+.pixel:nth-child(116){
 background: rgb(153,206,263);
 }
-.pixel:nth-child(129){
+.pixel:nth-child(117){
 background: rgb(0,77,153);
 }
-.pixel:nth-child(130){
+.pixel:nth-child(118){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(136){
+.pixel:nth-child(122){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(137){
+.pixel:nth-child(123){
 background: rgb(0,77,149);
 }
-.pixel:nth-child(138){
+.pixel:nth-child(124){
 background: rgb(153,206,255);
 }
-.pixel:nth-child(139){
+.pixel:nth-child(125){
 background: rgb(153,206,255);
 }
-.pixel:nth-child(140){
+.pixel:nth-child(126){
 background: rgb(255,255,255);
 }
+.pixel:nth-child(127){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(130){
+background: rgb(255,255,255);
+}
+.pixel:nth-child(131){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(132){
+background: rgb(153,206,263);
+}
+.pixel:nth-child(133){
+background: rgb(153,206,264);
+}
+.pixel:nth-child(134){
+background: rgb(0,77,153);
+}
+.pixel:nth-child(135){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(139){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(140){
+background: rgb(0,77,150);
+}
 .pixel:nth-child(141){
+background: rgb(153,206,255);
+}
+.pixel:nth-child(142){
+background: rgb(153,206,255);
+}
+.pixel:nth-child(143){
 background: rgb(0,0,0);
 }
 .pixel:nth-child(144){
-background: rgb(255,255,255);
-}
-.pixel:nth-child(145){
 background: rgb(0,0,0);
-}
-.pixel:nth-child(146){
-background: rgb(153,206,263);
 }
 .pixel:nth-child(147){
-background: rgb(153,206,264);
-}
-.pixel:nth-child(148){
-background: rgb(0,77,153);
-}
-.pixel:nth-child(149){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(155){
+.pixel:nth-child(148){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(149){
+background: rgb(153,206,264);
+}
+.pixel:nth-child(150){
+background: rgb(153,206,265);
+}
+.pixel:nth-child(151){
+background: rgb(0,77,153);
+}
+.pixel:nth-child(152){
 background: rgb(0,0,0);
 }
 .pixel:nth-child(156){
-background: rgb(0,77,150);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(157){
-background: rgb(153,206,255);
+background: rgb(0,77,151);
 }
 .pixel:nth-child(158){
 background: rgb(153,206,255);
 }
 .pixel:nth-child(159){
-background: rgb(0,0,0);
+background: rgb(153,206,255);
 }
 .pixel:nth-child(160){
-background: rgb(0,0,0);
+background: rgb(153,206,264);
+}
+.pixel:nth-child(161){
+background: rgb(230,138,0);
+}
+.pixel:nth-child(162){
+background: rgb(230,138,0);
 }
 .pixel:nth-child(163){
-background: rgb(0,0,0);
+background: rgb(230,138,0);
 }
 .pixel:nth-child(164){
-background: rgb(0,0,0);
+background: rgb(230,138,0);
 }
 .pixel:nth-child(165){
 background: rgb(153,206,264);
@@ -809,22 +839,31 @@ background: rgb(153,206,264);
 background: rgb(153,206,265);
 }
 .pixel:nth-child(167){
-background: rgb(0,77,153);
+background: rgb(153,206,266);
 }
 .pixel:nth-child(168){
+background: rgb(0,77,153);
+}
+.pixel:nth-child(169){
 background: rgb(0,0,0);
+}
+.pixel:nth-child(172){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(173){
+background: rgb(0,77,153);
 }
 .pixel:nth-child(174){
-background: rgb(0,0,0);
+background: rgb(0,77,152);
 }
 .pixel:nth-child(175){
-background: rgb(0,77,151);
+background: rgb(153,206,255);
 }
 .pixel:nth-child(176){
 background: rgb(153,206,255);
 }
 .pixel:nth-child(177){
-background: rgb(153,206,255);
+background: rgb(153,206,264);
 }
 .pixel:nth-child(178){
 background: rgb(153,206,264);
@@ -836,269 +875,212 @@ background: rgb(230,138,0);
 background: rgb(230,138,0);
 }
 .pixel:nth-child(181){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(182){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(183){
 background: rgb(153,206,264);
 }
+.pixel:nth-child(182){
+background: rgb(153,206,264);
+}
+.pixel:nth-child(183){
+background: rgb(153,206,266);
+}
 .pixel:nth-child(184){
-background: rgb(153,206,265);
+background: rgb(153,206,267);
 }
 .pixel:nth-child(185){
-background: rgb(153,206,266);
+background: rgb(0,77,153);
 }
 .pixel:nth-child(186){
 background: rgb(0,77,153);
 }
-.pixel:nth-child(187){
+.pixel:nth-child(189){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(192){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(193){
+.pixel:nth-child(190){
 background: rgb(0,77,153);
 }
+.pixel:nth-child(191){
+background: rgb(0,77,153);
+}
+.pixel:nth-child(192){
+background: rgb(153,206,255);
+}
+.pixel:nth-child(193){
+background: rgb(255,255,255);
+}
 .pixel:nth-child(194){
-background: rgb(0,77,152);
+background: rgb(255,255,255);
 }
 .pixel:nth-child(195){
-background: rgb(153,206,255);
+background: rgb(255,255,255);
 }
 .pixel:nth-child(196){
-background: rgb(153,206,255);
+background: rgb(255,255,255);
 }
 .pixel:nth-child(197){
-background: rgb(153,206,264);
+background: rgb(255,255,255);
 }
 .pixel:nth-child(198){
-background: rgb(153,206,264);
+background: rgb(255,255,255);
 }
 .pixel:nth-child(199){
-background: rgb(230,138,0);
+background: rgb(255,255,255);
 }
 .pixel:nth-child(200){
-background: rgb(230,138,0);
+background: rgb(255,255,255);
 }
 .pixel:nth-child(201){
-background: rgb(153,206,264);
+background: rgb(153,206,268);
 }
 .pixel:nth-child(202){
-background: rgb(153,206,264);
+background: rgb(0,77,153);
 }
 .pixel:nth-child(203){
-background: rgb(153,206,266);
-}
-.pixel:nth-child(204){
-background: rgb(153,206,267);
-}
-.pixel:nth-child(205){
 background: rgb(0,77,153);
 }
 .pixel:nth-child(206){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(207){
+background: rgb(0,77,153);
+}
+.pixel:nth-child(208){
 background: rgb(0,0,0);
+}
+.pixel:nth-child(209){
+background: rgb(255,255,255);
+}
+.pixel:nth-child(210){
+background: rgb(255,255,256);
 }
 .pixel:nth-child(211){
-background: rgb(0,0,0);
+background: rgb(255,255,257);
 }
 .pixel:nth-child(212){
-background: rgb(0,77,153);
+background: rgb(255,255,258);
 }
 .pixel:nth-child(213){
-background: rgb(0,77,153);
+background: rgb(255,255,259);
 }
 .pixel:nth-child(214){
-background: rgb(153,206,255);
+background: rgb(255,255,260);
 }
 .pixel:nth-child(215){
-background: rgb(255,255,255);
+background: rgb(255,255,261);
 }
 .pixel:nth-child(216){
-background: rgb(255,255,255);
+background: rgb(255,255,262);
 }
 .pixel:nth-child(217){
-background: rgb(255,255,255);
+background: rgb(255,255,263);
 }
 .pixel:nth-child(218){
-background: rgb(255,255,255);
+background: rgb(255,255,264);
 }
 .pixel:nth-child(219){
-background: rgb(255,255,255);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(220){
-background: rgb(255,255,255);
-}
-.pixel:nth-child(221){
-background: rgb(255,255,255);
-}
-.pixel:nth-child(222){
-background: rgb(255,255,255);
-}
-.pixel:nth-child(223){
-background: rgb(153,206,268);
+background: rgb(0,77,153);
 }
 .pixel:nth-child(224){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(225){
-background: rgb(0,77,153);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(226){
-background: rgb(0,0,0);
+background: rgb(255,255,255);
+}
+.pixel:nth-child(227){
+background: rgb(255,255,256);
+}
+.pixel:nth-child(228){
+background: rgb(255,255,257);
+}
+.pixel:nth-child(229){
+background: rgb(255,255,258);
 }
 .pixel:nth-child(230){
-background: rgb(0,0,0);
+background: rgb(255,255,259);
 }
 .pixel:nth-child(231){
-background: rgb(0,77,153);
+background: rgb(255,255,260);
 }
 .pixel:nth-child(232){
-background: rgb(0,0,0);
+background: rgb(255,255,261);
 }
 .pixel:nth-child(233){
-background: rgb(255,255,255);
+background: rgb(255,255,262);
 }
 .pixel:nth-child(234){
-background: rgb(255,255,256);
+background: rgb(255,255,263);
 }
 .pixel:nth-child(235){
-background: rgb(255,255,257);
+background: rgb(255,255,264);
 }
 .pixel:nth-child(236){
-background: rgb(255,255,258);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(237){
-background: rgb(255,255,259);
-}
-.pixel:nth-child(238){
-background: rgb(255,255,260);
-}
-.pixel:nth-child(239){
-background: rgb(255,255,261);
-}
-.pixel:nth-child(240){
-background: rgb(255,255,262);
-}
-.pixel:nth-child(241){
-background: rgb(255,255,263);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(242){
-background: rgb(255,255,264);
-}
-.pixel:nth-child(243){
 background: rgb(0,0,0);
-}
-.pixel:nth-child(244){
-background: rgb(0,77,153);
-}
-.pixel:nth-child(245){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(250){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(251){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(252){
-background: rgb(255,255,255);
 }
 .pixel:nth-child(253){
-background: rgb(255,255,256);
-}
-.pixel:nth-child(254){
-background: rgb(255,255,257);
-}
-.pixel:nth-child(255){
-background: rgb(255,255,258);
-}
-.pixel:nth-child(256){
-background: rgb(255,255,259);
-}
-.pixel:nth-child(257){
-background: rgb(255,255,260);
-}
-.pixel:nth-child(258){
-background: rgb(255,255,261);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(259){
-background: rgb(255,255,262);
+background: rgb(0,0,0);
 }
 .pixel:nth-child(260){
-background: rgb(255,255,263);
+background: rgb(230,138,0);
 }
 .pixel:nth-child(261){
-background: rgb(255,255,264);
+background: rgb(230,138,0);
 }
 .pixel:nth-child(262){
-background: rgb(0,0,0);
+background: rgb(230,138,0);
 }
 .pixel:nth-child(263){
 background: rgb(0,0,0);
 }
+.pixel:nth-child(264){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(265){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(266){
+background: rgb(0,0,0);
+}
+.pixel:nth-child(267){
+background: rgb(230,138,0);
+}
+.pixel:nth-child(268){
+background: rgb(230,138,0);
+}
+.pixel:nth-child(269){
+background: rgb(230,138,0);
+}
 .pixel:nth-child(270){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(281){
+.pixel:nth-child(277){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(289){
+.pixel:nth-child(278){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(290){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(291){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(292){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(293){
+.pixel:nth-child(279){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(294){
+.pixel:nth-child(284){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(295){
+.pixel:nth-child(285){
 background: rgb(0,0,0);
 }
-.pixel:nth-child(296){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(297){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(298){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(299){
-background: rgb(230,138,0);
-}
-.pixel:nth-child(300){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(309){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(310){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(311){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(316){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(317){
-background: rgb(0,0,0);
-}
-.pixel:nth-child(318){
+.pixel:nth-child(286){
 background: rgb(0,0,0);
 }

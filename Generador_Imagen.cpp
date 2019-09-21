@@ -36,9 +36,9 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
         while (aux_capa_dw != 0) {
             Nodo_Capa* aux_capa_sg = aux_capa_dw->sig;
             while (aux_capa_sg != 0) {
+             
                 if(matriz[i][j] == ""){
                     matriz[i][j] = aux_capa_sg->color;
-                
                 }else{
                     if(matriz[i][j] == "x" and aux_capa_sg->color != "x"){
                         matriz[i][j] = aux_capa_sg->color;
