@@ -702,7 +702,7 @@ void principal() {
                         if (capa_select > 0) {
                             Capa* busqueda = imagen_seleccionada->buscar_index(capa_select);
                             if (busqueda != 0) {
-                                menu_aplicar_filtros(nombre_capa);
+                                menu_aplicar_filtros(busqueda->nombre);
                             } else {
                                 cout << "opcion incorrecta" << endl;
                             }

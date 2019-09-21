@@ -106,6 +106,8 @@ void Generador_Imagen::generar_imagen(Cubo* cubo, string filtro) {
             }
         }
         mosaico = mosaico + "</div>";
+    }else if(filtro == "collage"){
+        
     }else{
         file_css << "}" << endl;
     }
