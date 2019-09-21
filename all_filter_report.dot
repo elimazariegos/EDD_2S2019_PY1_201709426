@@ -1,7 +1,7 @@
 digraph Grafica{
 rankdir=LR;
 node[shape=box]
-ALLFILTERS [with=1.5];filter0[label = "-negativo"]
+ALLFILTERS [with=1.5];filter0[label = "Pico_Patas.csv-espejo-xy"]
 
 filter0 -> filter0
 filter0 -> filter0

@@ -34,6 +34,8 @@ string to_string(T n) {
     os << n;
     return os.str();
 }
+    
+    int es_entero(string ent);
 
     void generar_imagen(Cubo* cubo, string filtro);
     string generar_mosaico(Cubo* cubo, string matriz);

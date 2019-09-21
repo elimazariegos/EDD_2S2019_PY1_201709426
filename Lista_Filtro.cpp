@@ -172,6 +172,8 @@ void Lista_Filtro::insertar_al_frente(string filtro_, string capa_, Cubo* cubo_)
         
         }else if(filtro_ == "mosaico"){
             cubo_filter = cubo_;
+        }else if(filtro_ == "collage"){
+            cubo_filter = cubo_;
         }
         aux_cubo= aux_cubo->sig;
     }
