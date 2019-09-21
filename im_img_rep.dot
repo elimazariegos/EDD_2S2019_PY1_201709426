@@ -1,5 +1,13 @@
 digraph g{
 node [shape = record, heigth=.1];
-capaarchivo[label= "<f0>|<f1>archivo|<f2>"];
+capaA[label= "<f0>|<f1>A|<f2>"];
+"capaA":f2 -> "capaAB":f1;
+capaAB[label= "<f0>|<f1>AB|<f2>"];
+"capaAB":f2 -> "capaBC":f1;
+capaB[label= "<f0>|<f1>B|<f2>"];
+capaBC[label= "<f0>|<f1>BC|<f2>"];
+"capaBC":f2 -> "capaC":f1;
+"capaBC":f0 -> "capaB":f1;
+capaC[label= "<f0>|<f1>C|<f2>"];
 
 }

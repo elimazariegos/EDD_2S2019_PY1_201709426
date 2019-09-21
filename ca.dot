@@ -33,50 +33,6 @@ f9[label="9"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
 f8->f9
 f9->f8
 f9[label="9"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f10[label="10"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f9->f10
-f10->f9
-f10[label="10"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f11[label="11"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f10->f11
-f11->f10
-f11[label="11"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f12[label="12"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f11->f12
-f12->f11
-f12[label="12"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f13[label="13"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f12->f13
-f13->f12
-f13[label="13"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f14[label="14"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f13->f14
-f14->f13
-f14[label="14"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f15[label="15"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f14->f15
-f15->f14
-f15[label="15"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f16[label="16"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f15->f16
-f16->f15
-f16[label="16"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f17[label="17"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f16->f17
-f17->f16
-f17[label="17"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f18[label="18"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f17->f18
-f18->f17
-f18[label="18"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f19[label="19"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f18->f19
-f19->f18
-f19[label="19"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f20[label="20"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f19->f20
-f20->f19
-f20[label="20"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
 c1[label="1"width = 1.5 style=filled, fillcolor=gray, group= 1 ]
 c2[label="2"width = 1.5 style=filled, fillcolor=gray, group= 2 ]
 c1->c2
@@ -122,260 +78,68 @@ c12[label="12"width = 1.5 style=filled, fillcolor=gray, group= 12 ]
 c11->c12
 c12->c11
 c12[label="12"width = 1.5 style=filled, fillcolor=gray, group= 12 ]
-c13[label="13"width = 1.5 style=filled, fillcolor=gray, group= 13 ]
-c12->c13
-c13->c12
-c13[label="13"width = 1.5 style=filled, fillcolor=gray, group= 13 ]
-c14[label="14"width = 1.5 style=filled, fillcolor=gray, group= 14 ]
-c13->c14
-c14->c13
-c14[label="14"width = 1.5 style=filled, fillcolor=gray, group= 14 ]
-c15[label="15"width = 1.5 style=filled, fillcolor=gray, group= 15 ]
-c14->c15
-c15->c14
-c15[label="15"width = 1.5 style=filled, fillcolor=gray, group= 15 ]
-F13_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f13;]
-F13_C7->F13_C8
-F13_C7->F14_C7
-f13->F13_C7
-F13_C7->f13
-c7->F13_C7
-F13_C7->c7
-F13_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f13;]
-F13_C8->F13_C13
-F13_C8->F14_C8
-F13_C8->F13_C7
-c8->F13_C8
-F13_C8->c8
-F13_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f13;]
-F13_C13->F13_C14
-F13_C13->F14_C13
-F13_C13->F13_C8
-c13->F13_C13
-F13_C13->c13
-F13_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f13;]
-F13_C14->F14_C14
-F13_C14->F13_C13
-c14->F13_C14
-F13_C14->c14
-F14_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f14;]
-F14_C7->F14_C8
-F14_C7->F15_C7
-F14_C7->F13_C7
-f14->F14_C7
-F14_C7->f14
-F14_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f14;]
-F14_C8->F14_C13
-F14_C8->F15_C8
-F14_C8->F13_C8
-F14_C8->F14_C7
-F14_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f14;]
-F14_C13->F14_C14
-F14_C13->F15_C13
-F14_C13->F13_C13
-F14_C13->F14_C8
-F14_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f14;]
-F14_C14->F15_C14
-F14_C14->F13_C14
-F14_C14->F14_C13
-F15_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f15;]
-F15_C7->F15_C8
-F15_C7->F16_C7
-F15_C7->F14_C7
-f15->F15_C7
-F15_C7->f15
-F15_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f15;]
-F15_C8->F15_C13
-F15_C8->F16_C8
-F15_C8->F14_C8
-F15_C8->F15_C7
-F15_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f15;]
-F15_C13->F15_C14
-F15_C13->F16_C13
-F15_C13->F14_C13
-F15_C13->F15_C8
-F15_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f15;]
-F15_C14->F16_C14
-F15_C14->F14_C14
-F15_C14->F15_C13
-F16_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f16;]
-F16_C7->F16_C8
-F16_C7->F17_C7
-F16_C7->F15_C7
-f16->F16_C7
-F16_C7->f16
-F16_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f16;]
-F16_C8->F16_C13
-F16_C8->F17_C8
-F16_C8->F15_C8
-F16_C8->F16_C7
-F16_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f16;]
-F16_C13->F16_C14
-F16_C13->F17_C13
-F16_C13->F15_C13
-F16_C13->F16_C8
-F16_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f16;]
-F16_C14->F17_C14
-F16_C14->F15_C14
-F16_C14->F16_C13
-F17_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f17;]
-F17_C7->F17_C8
-F17_C7->F18_C7
-F17_C7->F16_C7
-f17->F17_C7
-F17_C7->f17
-F17_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f17;]
-F17_C8->F17_C13
-F17_C8->F18_C8
-F17_C8->F16_C8
-F17_C8->F17_C7
-F17_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f17;]
-F17_C13->F17_C14
-F17_C13->F18_C13
-F17_C13->F16_C13
-F17_C13->F17_C8
-F17_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f17;]
-F17_C14->F18_C14
-F17_C14->F16_C14
-F17_C14->F17_C13
-F18_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f18;]
-F18_C7->F18_C8
-F18_C7->F19_C7
-F18_C7->F17_C7
-f18->F18_C7
-F18_C7->f18
-F18_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f18;]
-F18_C8->F18_C9
-F18_C8->F19_C8
-F18_C8->F17_C8
-F18_C8->F18_C7
-F18_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f18;]
-F18_C9->F18_C10
-F18_C9->F19_C9
-F18_C9->F18_C8
-c9->F18_C9
-F18_C9->c9
-F18_C10[width = 1.5 style=filled, fillcolor=gray, group= 10, rank = f18;]
-F18_C10->F18_C11
-F18_C10->F19_C10
-F18_C10->F18_C9
-c10->F18_C10
-F18_C10->c10
-F18_C11[width = 1.5 style=filled, fillcolor=gray, group= 11, rank = f18;]
-F18_C11->F18_C12
-F18_C11->F19_C11
-F18_C11->F18_C10
-c11->F18_C11
-F18_C11->c11
-F18_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f18;]
-F18_C12->F18_C13
-F18_C12->F19_C12
-F18_C12->F18_C11
-c12->F18_C12
-F18_C12->c12
-F18_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f18;]
-F18_C13->F18_C14
-F18_C13->F19_C13
-F18_C13->F17_C13
-F18_C13->F18_C12
-F18_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f18;]
-F18_C14->F19_C14
-F18_C14->F17_C14
-F18_C14->F18_C13
-F19_C6[width = 1.5 style=filled, fillcolor=gray, group= 6, rank = f19;]
-F19_C6->F19_C7
-F19_C6->F20_C6
-f19->F19_C6
-F19_C6->f19
-c6->F19_C6
-F19_C6->c6
-F19_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f19;]
-F19_C7->F19_C8
-F19_C7->F20_C7
-F19_C7->F18_C7
-F19_C7->F19_C6
-F19_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f19;]
-F19_C8->F19_C9
-F19_C8->F20_C8
-F19_C8->F18_C8
-F19_C8->F19_C7
-F19_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f19;]
-F19_C9->F19_C10
-F19_C9->F20_C9
-F19_C9->F18_C9
-F19_C9->F19_C8
-F19_C10[width = 1.5 style=filled, fillcolor=gray, group= 10, rank = f19;]
-F19_C10->F19_C11
-F19_C10->F20_C10
-F19_C10->F18_C10
-F19_C10->F19_C9
-F19_C11[width = 1.5 style=filled, fillcolor=gray, group= 11, rank = f19;]
-F19_C11->F19_C12
-F19_C11->F20_C11
-F19_C11->F18_C11
-F19_C11->F19_C10
-F19_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f19;]
-F19_C12->F19_C13
-F19_C12->F20_C12
-F19_C12->F18_C12
-F19_C12->F19_C11
-F19_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f19;]
-F19_C13->F19_C14
-F19_C13->F20_C13
-F19_C13->F18_C13
-F19_C13->F19_C12
-F19_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f19;]
-F19_C14->F19_C15
-F19_C14->F20_C14
-F19_C14->F18_C14
-F19_C14->F19_C13
-F19_C15[width = 1.5 style=filled, fillcolor=gray, group= 15, rank = f19;]
-F19_C15->F20_C15
-F19_C15->F19_C14
-c15->F19_C15
-F19_C15->c15
-F20_C6[width = 1.5 style=filled, fillcolor=gray, group= 6, rank = f20;]
-F20_C6->F20_C7
-F20_C6->F19_C6
-f20->F20_C6
-F20_C6->f20
-F20_C7[width = 1.5 style=filled, fillcolor=gray, group= 7, rank = f20;]
-F20_C7->F20_C8
-F20_C7->F19_C7
-F20_C7->F20_C6
-F20_C8[width = 1.5 style=filled, fillcolor=gray, group= 8, rank = f20;]
-F20_C8->F20_C9
-F20_C8->F19_C8
-F20_C8->F20_C7
-F20_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f20;]
-F20_C9->F20_C10
-F20_C9->F19_C9
-F20_C9->F20_C8
-F20_C10[width = 1.5 style=filled, fillcolor=gray, group= 10, rank = f20;]
-F20_C10->F20_C11
-F20_C10->F19_C10
-F20_C10->F20_C9
-F20_C11[width = 1.5 style=filled, fillcolor=gray, group= 11, rank = f20;]
-F20_C11->F20_C12
-F20_C11->F19_C11
-F20_C11->F20_C10
-F20_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f20;]
-F20_C12->F20_C13
-F20_C12->F19_C12
-F20_C12->F20_C11
-F20_C13[width = 1.5 style=filled, fillcolor=gray, group= 13, rank = f20;]
-F20_C13->F20_C14
-F20_C13->F19_C13
-F20_C13->F20_C12
-F20_C14[width = 1.5 style=filled, fillcolor=gray, group= 14, rank = f20;]
-F20_C14->F20_C15
-F20_C14->F19_C14
-F20_C14->F20_C13
-F20_C15[width = 1.5 style=filled, fillcolor=gray, group= 15, rank = f20;]
-F20_C15->F19_C15
-F20_C15->F20_C14
-{rank = same f1;}{rank = same f2;}{rank = same f3;}{rank = same f4;}{rank = same f5;}{rank = same f6;}{rank = same f7;}{rank = same f8;}{rank = same f9;}{rank = same f10;}{rank = same f11;}{rank = same f12;}{rank = same f13;F13_C7;F13_C8;F13_C13;F13_C14;}{rank = same f14;F14_C7;F14_C8;F14_C13;F14_C14;}{rank = same f15;F15_C7;F15_C8;F15_C13;F15_C14;}{rank = same f16;F16_C7;F16_C8;F16_C13;F16_C14;}{rank = same f17;F17_C7;F17_C8;F17_C13;F17_C14;}{rank = same f18;F18_C7;F18_C8;F18_C9;F18_C10;F18_C11;F18_C12;F18_C13;F18_C14;}{rank = same f19;F19_C6;F19_C7;F19_C8;F19_C9;F19_C10;F19_C11;F19_C12;F19_C13;F19_C14;F19_C15;}{rank = same f20;F20_C6;F20_C7;F20_C8;F20_C9;F20_C10;F20_C11;F20_C12;F20_C13;F20_C14;F20_C15;}{rank = same;Cabecera;
-c1;c2;c3;c4;c5;c6;c7;c8;c9;c10;c11;c12;c13;c14;c15;}
+F3_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f3;]
+F3_C9[label="0,0,0"]
+F3_C9->F3_C10
+F3_C9->F5_C9
+f3->F3_C9
+F3_C9->f3
+c9->F3_C9
+F3_C9->c9
+F3_C10[width = 1.5 style=filled, fillcolor=gray, group= 10, rank = f3;]
+F3_C10[label="0,0,0"]
+F3_C10->F3_C11
+F3_C10->F9_C10
+F3_C10->F3_C9
+c10->F3_C10
+F3_C10->c10
+F3_C11[width = 1.5 style=filled, fillcolor=gray, group= 11, rank = f3;]
+F3_C11[label="0,0,0"]
+F3_C11->F3_C12
+F3_C11->F9_C11
+F3_C11->F3_C10
+c11->F3_C11
+F3_C11->c11
+F3_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f3;]
+F3_C12[label="0,0,0"]
+F3_C12->F5_C12
+F3_C12->F3_C11
+c12->F3_C12
+F3_C12->c12
+F5_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f5;]
+F5_C9[label="0,0,0"]
+F5_C9->F5_C12
+F5_C9->F6_C9
+F5_C9->F3_C9
+f5->F5_C9
+F5_C9->f5
+F5_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f5;]
+F5_C12[label="0,0,0"]
+F5_C12->F6_C12
+F5_C12->F3_C12
+F5_C12->F5_C9
+F6_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f6;]
+F6_C9[label="0,0,0"]
+F6_C9->F6_C12
+F6_C9->F5_C9
+f6->F6_C9
+F6_C9->f6
+F6_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f6;]
+F6_C12[label="0,0,0"]
+F6_C12->F5_C12
+F6_C12->F6_C9
+F9_C10[width = 1.5 style=filled, fillcolor=gray, group= 10, rank = f9;]
+F9_C10[label="0,0,0"]
+F9_C10->F9_C11
+F9_C10->F3_C10
+f9->F9_C10
+F9_C10->f9
+F9_C11[width = 1.5 style=filled, fillcolor=gray, group= 11, rank = f9;]
+F9_C11[label="0,0,0"]
+F9_C11->F3_C11
+F9_C11->F9_C10
+{rank = same f1;}{rank = same f2;}{rank = same f3;F3_C9;F3_C10;F3_C11;F3_C12;}{rank = same f4;}{rank = same f5;F5_C9;F5_C12;}{rank = same f6;F6_C9;F6_C12;}{rank = same f7;}{rank = same f8;}{rank = same f9;F9_C10;F9_C11;}{rank = same;Cabecera;
+c1;c2;c3;c4;c5;c6;c7;c8;c9;c10;c11;c12;}
 Cabecera->f1
 Cabecera->c1
 }
