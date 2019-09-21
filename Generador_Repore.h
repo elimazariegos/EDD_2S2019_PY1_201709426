@@ -10,6 +10,8 @@
 
 #include "Nodo_ABB.h"
 #include "Arbol_ABB.h"
+#include "Nodo_Filtro.h"
+#include "Lista_Filtro.h"
 
 class Generador_Repore {
 public:
@@ -25,6 +27,7 @@ public:
     void recorrer_pre_order(Nodo_ABB* tmp);
     void recorrer_post_order(Nodo_ABB* tmp);
     void transversal_report(Arbol_ABB* abb, int recorrido);
+    void all_filter_report(Lista_Filtro* list);
     void generar_capa(Nodo_Capa* tmp);
     template <typename T>
     string to_string(T n) {

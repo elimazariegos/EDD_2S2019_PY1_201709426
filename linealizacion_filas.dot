@@ -1,12 +1,10 @@
 digraph Grafica{
 rankdir=LR;
 node[shape=box]
-Cabecera [with=1.5];Cabecera->f0
-f0[label="(2,2) 0,0,0"]
-f0->f1
-f1[label="(3,2) 0,0,0"]
-f1->f2
-f2[label="(2,3) 0,0,0"]
-f2->f3
-f3[label="(3,3) 0,0,0"]
-}
+Cabecera [with=1.5];filter0[label = "-negativo"]
+
+filter0->filter1
+filter1[label = "-espejo-xy"]
+
+filter1->filter2
+filter0->filter1

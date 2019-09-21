@@ -1,0 +1,8 @@
+digraph Grafica{
+rankdir=LR;
+node[shape=box]
+ALLFILTERS [with=1.5];filter0[label = "-negativo"]
+
+filter0 -> filter0
+filter0 -> filter0
+}

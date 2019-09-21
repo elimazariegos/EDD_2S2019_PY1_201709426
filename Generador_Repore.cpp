@@ -8,6 +8,7 @@
 #include "Generador_Repore.h"
 #include "Generador_Imagen.h"
 #include "Arbol_ABB.h"
+#include "Lista_Filtro.h"
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -315,4 +316,40 @@ void Generador_Repore::recorrer_post_order(Nodo_ABB* tmp) {
         index++;
 
     }
+}
+
+void Generador_Repore::all_filter_report(Lista_Filtro* list){
+    
+    ofstream file;
+    file.open("all_filter_report.dot");
+    file << "digraph Grafica{\nrankdir=LR;" << endl;
+    file << "node[shape=box]" << endl;
+    file << "ALLFILTERS [with=1.5];";
+
+    Nodo_Filtro* aux = list->cabeza;
+    
+    int i = 0;
+    do{
+        file << "filter" << i << "[label = \""+ aux->capa+"-"+ aux->filtro+ "\"]\n" << endl;
+        if(i < list->size - 1){
+            file << "filter" << i << "->" << "filter" << i + 1 << endl;
+        }
+        if(i > 0){
+            file << "filter" << i - 1 << "->" << "filter" << i << endl;
+        }
+        i++;
+        aux = aux->sig;
+    }while(aux != list->cabeza);
+    
+    file << "filter0 -> filter"<<i-1<< endl;
+    file <<"filter"<<i-1<< " -> filter0" << endl;
+    file << "}" << endl;
+
+
+
+
+    system("dot -Tpng all_filter_report.dot -o all_filter_report.png");
+    string title = "all_filter_report.png";
+    ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
+    
 }

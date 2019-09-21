@@ -223,6 +223,7 @@ void menu_reportes() {
     cout << "[2] Image Layer Report" << endl;
     cout << "[3] Lineal Matrix Report" << endl;
     cout << "[4] Transversal Report" << endl;
+    cout << "[5] Filters reports" << endl;
     cout << "Seleccione una opcion" << endl;
     cout << "-->";
     string op;
@@ -335,7 +336,7 @@ void menu_reportes() {
         } else {
             cout << "No se selecciono la imagen" << endl;
         }
-    }else if(opcion == 4){
+    } else if (opcion == 4) {
         cout << "[************************************************]" << endl;
         cout << "Seleccione un recorrido" << endl;
         cout << "[************************************************]" << endl;
@@ -344,12 +345,69 @@ void menu_reportes() {
         cout << "[3] post-order" << endl;
         cout << "->";
         cin>>op;
-        opcion= es_entero(op);
-        if(opcion > 0 and opcion < 4){
+        opcion = es_entero(op);
+        if (opcion > 0 and opcion < 4) {
             gr->transversal_report(abb, opcion);
-        }else{
+        } else {
             cout << "opcion incorrecta" << endl;
         }
+    } else if (opcion == 5) {
+        if (lista_fitros != 0) {
+            cout << "[************************************************]" << endl;
+            cout << "Seleccione una opcion" << endl;
+            cout << "[************************************************]" << endl;
+            cout << "[1] All Filter Report" << endl;
+            cout << "[2] Individual Filter Report" << endl;
+            cout << "->";
+            cin>>op;
+            opcion = es_entero(op);
+            if (opcion == 1) {
+                gr->all_filter_report(lista_fitros);
+            } else if (opcion == 2) {
+                cout << "Seleccione un filtro" << endl;
+                Nodo_Filtro* aux = lista_fitros->cabeza;
+                do {
+                    cout << "[" << aux->index << "] " << aux->filtro << endl;
+                    aux = aux->sig;
+                } while (aux != lista_fitros->cabeza);
+                cin>>op;
+                opcion = es_entero(op);
+                if (opcion > 0 and opcion <= lista_fitros->size) {
+                    aux = lista_fitros->buscar(opcion);
+                    if (aux != 0) {
+                        Nodo_Cubo* aux_c = aux->cub->cabeza;
+                        int i = 1;
+                        while (aux_c != 0) {
+                            cout << "[" << i << "] " << aux_c->capa->nombre << endl;
+                            i++;
+                            aux_c = aux_c->sig;
+                        }
+                        cout << "Seleccione una capa" << endl;
+                        cin>>op;
+                        int capa_select = es_entero(op);
+                        if (capa_select > 0) {
+                            Capa* busqueda = aux->cub->buscar_index(capa_select);
+                            if (busqueda != 0) {
+                                gr->generar_capa(busqueda->cabecera);
+                            } else {
+                                cout << "opcion incorrecta" << endl;
+                            }
+                        } else {
+                            cout << "opcion incorrecta" << endl;
+                        }
+
+                    } else {
+                        cout << "opcion incorrecta" << endl;
+                    }
+
+                }
+            } else {
+
+            }
+        } else {
+            cout << "La lista de filtros esta vacia" << endl;
+        }
+
     }
 
 }
@@ -616,7 +674,7 @@ void principal() {
             case 3:
                 if (imagen_seleccionada != 0) {
                     cout << "[************************************************]" << endl;
-                    cout << "Bienvenido a la exportacion de imagenes..." << endl;
+                    cout << "Ingresar Filtros..." << endl;
                     cout << "[************************************************]" << endl;
                     cout << "[1] Filtro a Imagen completa" << endl;
                     cout << "[2] Filtro a una capa en espeficio" << endl;
@@ -631,15 +689,27 @@ void principal() {
                     if (filt == 1) {
                         menu_aplicar_filtros(nombre_capa);
                     } else if (filt == 2) {
-                        cout << "[************************************************]" << endl;
-                        cout << "Ingrese el nombre de la capa" << endl;
-                        cout << "-->";
-                        cin>>nombre_capa;
-                        if (imagen_seleccionada->buscar(nombre_capa) != 0) {
-                            menu_aplicar_filtros(nombre_capa);
-                        } else {
-                            cout << "No existe la capa con el nombre: " << nombre_capa << endl;
+                        Nodo_Cubo* aux_c = imagen_seleccionada->cabeza;
+                        int i = 1;
+                        while (aux_c != 0) {
+                            cout << "[" << i << "] " << aux_c->capa->nombre << endl;
+                            i++;
+                            aux_c = aux_c->sig;
                         }
+                        cout << "Seleccione una capa" << endl;
+                        cin>>op;
+                        int capa_select = es_entero(op);
+                        if (capa_select > 0) {
+                            Capa* busqueda = imagen_seleccionada->buscar_index(capa_select);
+                            if (busqueda != 0) {
+                                menu_aplicar_filtros(nombre_capa);
+                            } else {
+                                cout << "opcion incorrecta" << endl;
+                            }
+                        } else {
+                            cout << "opcion incorrecta" << endl;
+                        }
+
                     } else {
                         cout << "opcion incorrecta" << endl;
                     }

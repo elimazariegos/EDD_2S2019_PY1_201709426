@@ -13,26 +13,6 @@ f4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
 f3->f4
 f4->f3
 f4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f5[label="5"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f4->f5
-f5->f4
-f5[label="5"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f6[label="6"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f5->f6
-f6->f5
-f6[label="6"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f7[label="7"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f6->f7
-f7->f6
-f7[label="7"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f8[label="8"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f7->f8
-f8->f7
-f8[label="8"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f9[label="9"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
-f8->f9
-f9->f8
-f9[label="9"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
 c1[label="1"width = 1.5 style=filled, fillcolor=gray, group= 1 ]
 c2[label="2"width = 1.5 style=filled, fillcolor=gray, group= 2 ]
 c1->c2
@@ -46,100 +26,32 @@ c4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 4 ]
 c3->c4
 c4->c3
 c4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 4 ]
-c5[label="5"width = 1.5 style=filled, fillcolor=gray, group= 5 ]
-c4->c5
-c5->c4
-c5[label="5"width = 1.5 style=filled, fillcolor=gray, group= 5 ]
-c6[label="6"width = 1.5 style=filled, fillcolor=gray, group= 6 ]
-c5->c6
-c6->c5
-c6[label="6"width = 1.5 style=filled, fillcolor=gray, group= 6 ]
-c7[label="7"width = 1.5 style=filled, fillcolor=gray, group= 7 ]
-c6->c7
-c7->c6
-c7[label="7"width = 1.5 style=filled, fillcolor=gray, group= 7 ]
-c8[label="8"width = 1.5 style=filled, fillcolor=gray, group= 8 ]
-c7->c8
-c8->c7
-c8[label="8"width = 1.5 style=filled, fillcolor=gray, group= 8 ]
-c9[label="9"width = 1.5 style=filled, fillcolor=gray, group= 9 ]
-c8->c9
-c9->c8
-c9[label="9"width = 1.5 style=filled, fillcolor=gray, group= 9 ]
-c10[label="10"width = 1.5 style=filled, fillcolor=gray, group= 10 ]
-c9->c10
-c10->c9
-c10[label="10"width = 1.5 style=filled, fillcolor=gray, group= 10 ]
-c11[label="11"width = 1.5 style=filled, fillcolor=gray, group= 11 ]
-c10->c11
-c11->c10
-c11[label="11"width = 1.5 style=filled, fillcolor=gray, group= 11 ]
-c12[label="12"width = 1.5 style=filled, fillcolor=gray, group= 12 ]
-c11->c12
-c12->c11
-c12[label="12"width = 1.5 style=filled, fillcolor=gray, group= 12 ]
-F3_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f3;]
-F3_C9[label="0,0,0"]
-F3_C9->F3_C10
-F3_C9->F5_C9
-f3->F3_C9
-F3_C9->f3
-c9->F3_C9
-F3_C9->c9
-F3_C10[width = 1.5 style=filled, fillcolor=gray, group= 10, rank = f3;]
-F3_C10[label="0,0,0"]
-F3_C10->F3_C11
-F3_C10->F9_C10
-F3_C10->F3_C9
-c10->F3_C10
-F3_C10->c10
-F3_C11[width = 1.5 style=filled, fillcolor=gray, group= 11, rank = f3;]
-F3_C11[label="0,0,0"]
-F3_C11->F3_C12
-F3_C11->F9_C11
-F3_C11->F3_C10
-c11->F3_C11
-F3_C11->c11
-F3_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f3;]
-F3_C12[label="0,0,0"]
-F3_C12->F5_C12
-F3_C12->F3_C11
-c12->F3_C12
-F3_C12->c12
-F5_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f5;]
-F5_C9[label="0,0,0"]
-F5_C9->F5_C12
-F5_C9->F6_C9
-F5_C9->F3_C9
-f5->F5_C9
-F5_C9->f5
-F5_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f5;]
-F5_C12[label="0,0,0"]
-F5_C12->F6_C12
-F5_C12->F3_C12
-F5_C12->F5_C9
-F6_C9[width = 1.5 style=filled, fillcolor=gray, group= 9, rank = f6;]
-F6_C9[label="0,0,0"]
-F6_C9->F6_C12
-F6_C9->F5_C9
-f6->F6_C9
-F6_C9->f6
-F6_C12[width = 1.5 style=filled, fillcolor=gray, group= 12, rank = f6;]
-F6_C12[label="0,0,0"]
-F6_C12->F5_C12
-F6_C12->F6_C9
-F9_C10[width = 1.5 style=filled, fillcolor=gray, group= 10, rank = f9;]
-F9_C10[label="0,0,0"]
-F9_C10->F9_C11
-F9_C10->F3_C10
-f9->F9_C10
-F9_C10->f9
-F9_C11[width = 1.5 style=filled, fillcolor=gray, group= 11, rank = f9;]
-F9_C11[label="0,0,0"]
-F9_C11->F3_C11
-F9_C11->F9_C10
-{rank = same f1;}{rank = same f2;}{rank = same f3;F3_C9;F3_C10;F3_C11;F3_C12;}{rank = same f4;}{rank = same f5;F5_C9;F5_C12;}{rank = same f6;F6_C9;F6_C12;}{rank = same f7;}{rank = same f8;}{rank = same f9;F9_C10;F9_C11;}{rank = same;Cabecera;
-c1;c2;c3;c4;c5;c6;c7;c8;c9;c10;c11;c12;}
+F1_C1[width = 1.5 style=filled, fillcolor=gray, group= 1, rank = f1;]
+F1_C1[label="145,14,50"]
+F1_C1->F1_C4
+F1_C1->F4_C1
+f1->F1_C1
+F1_C1->f1
+c1->F1_C1
+F1_C1->c1
+F1_C4[width = 1.5 style=filled, fillcolor=gray, group= 4, rank = f1;]
+F1_C4[label="145,14,50"]
+F1_C4->F4_C4
+F1_C4->F1_C1
+c4->F1_C4
+F1_C4->c4
+F4_C1[width = 1.5 style=filled, fillcolor=gray, group= 1, rank = f4;]
+F4_C1[label="145,14,50"]
+F4_C1->F4_C4
+F4_C1->F1_C1
+f4->F4_C1
+F4_C1->f4
+F4_C4[width = 1.5 style=filled, fillcolor=gray, group= 4, rank = f4;]
+F4_C4[label="145,14,50"]
+F4_C4->F1_C4
+F4_C4->F4_C1
+{rank = same f1;F1_C1;F1_C4;}{rank = same f2;}{rank = same f3;}{rank = same f4;F4_C1;F4_C4;}{rank = same;Cabecera;
+c1;c2;c3;c4;}
 Cabecera->f1
 Cabecera->c1
 }
