@@ -57,6 +57,7 @@ int es_entero(string ent) {
 
 string abrir_archivo(string direccion) {
     string cadena = "";
+    direccion = "Archivos/"+direccion;
     ifstream fe(direccion);
     if (fe.good()) {
         while (!fe.eof()) {
@@ -276,7 +277,7 @@ void menu_reportes() {
                 if (capa_select > 0) {
                     Capa* busqueda = img_report->buscar_index(capa_select);
                     if (busqueda != 0) {
-                        gr->generar_capa(busqueda->cabecera);
+                        gr->generar_capa(busqueda->cabecera, busqueda);
                     }
                 }
             }
@@ -325,9 +326,9 @@ void menu_reportes() {
                         cin>>op;
                         int lineal = es_entero(op);
                         if (lineal == 1) {
-                            gr->linealizacion_filas(busqueda->cabecera);
+                            gr->linealizacion_filas(busqueda->cabecera, busqueda);
                         } else if (lineal == 2) {
-                            gr->linealizacion_columnas(busqueda->cabecera);
+                            gr->linealizacion_columnas(busqueda->cabecera, busqueda);
                         } else {
 
                         }
@@ -389,7 +390,7 @@ void menu_reportes() {
                         if (capa_select > 0) {
                             Capa* busqueda = aux->cub->buscar_index(capa_select);
                             if (busqueda != 0) {
-                                gr->generar_capa(busqueda->cabecera);
+                                gr->generar_capa(busqueda->cabecera, busqueda);
                             } else {
                                 cout << "opcion incorrecta" << endl;
                             }

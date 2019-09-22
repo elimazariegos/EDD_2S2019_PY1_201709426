@@ -1,0 +1,10 @@
+digraph Grafica{bgcolor=deepskyblue;
+rankdir=LR;
+node[shape=box]
+label = "Transversal report Post-order ";
+abb0[label="Mario2"]
+abb1[label="Mario1"]
+
+abb0->abb1;
+
+}

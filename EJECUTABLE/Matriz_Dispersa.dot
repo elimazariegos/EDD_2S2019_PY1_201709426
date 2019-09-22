@@ -1,0 +1,58 @@
+digraph Grafica{bgcolor=deepskyblue;
+label = "Matriz dispersa de la capa: ne2.csv ";
+node[shape=box]
+Cabecera [with=1.5, style=filled, fillcolor=green, group= 1];e0[shape=point, width= 0];e1[shape=point, width= 0];f1[label="1"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
+f2[label="2"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
+f1->f2
+f2->f1
+f2[label="2"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
+f3[label="3"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
+f2->f3
+f3->f2
+f3[label="3"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
+f4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
+f3->f4
+f4->f3
+f4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 0 ]
+c1[label="1"width = 1.5 style=filled, fillcolor=gray, group= 1 ]
+c2[label="2"width = 1.5 style=filled, fillcolor=gray, group= 2 ]
+c1->c2
+c2->c1
+c2[label="2"width = 1.5 style=filled, fillcolor=gray, group= 2 ]
+c3[label="3"width = 1.5 style=filled, fillcolor=gray, group= 3 ]
+c2->c3
+c3->c2
+c3[label="3"width = 1.5 style=filled, fillcolor=gray, group= 3 ]
+c4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 4 ]
+c3->c4
+c4->c3
+c4[label="4"width = 1.5 style=filled, fillcolor=gray, group= 4 ]
+F1_C1[width = 1.5 style=filled, fillcolor=gray, group= 1, rank = f1;]
+F1_C1[label="110,241,205"]
+F1_C1->F1_C4
+F1_C1->F4_C1
+f1->F1_C1
+F1_C1->f1
+c1->F1_C1
+F1_C1->c1
+F1_C4[width = 1.5 style=filled, fillcolor=gray, group= 4, rank = f1;]
+F1_C4[label="110,241,205"]
+F1_C4->F4_C4
+F1_C4->F1_C1
+c4->F1_C4
+F1_C4->c4
+F4_C1[width = 1.5 style=filled, fillcolor=gray, group= 1, rank = f4;]
+F4_C1[label="110,241,205"]
+F4_C1->F4_C4
+F4_C1->F1_C1
+f4->F4_C1
+F4_C1->f4
+F4_C4[width = 1.5 style=filled, fillcolor=gray, group= 4, rank = f4;]
+F4_C4[label="110,241,205"]
+F4_C4->F1_C4
+F4_C4->F4_C1
+{rank = same f1;F1_C1;F1_C4;}{rank = same f2;}{rank = same f3;}{rank = same f4;F4_C1;F4_C4;}{rank = same;Cabecera;
+c1;c2;c3;c4;}
+Cabecera->f1
+Cabecera->c1
+}

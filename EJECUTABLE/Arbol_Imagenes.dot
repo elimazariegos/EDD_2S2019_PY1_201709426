@@ -1,0 +1,8 @@
+digraph g{bgcolor=deepskyblue;
+label = "ARBOL DE IMAGENES ";
+node [shape = record, heigth=.1];
+capaMario1[label= "<f0>|<f1>Mario1|<f2>"];
+"capaMario1":f2 -> "capaMario2":f1;
+capaMario2[label= "<f0>|<f1>Mario2|<f2>"];
+
+}

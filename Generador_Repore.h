@@ -19,8 +19,8 @@ public:
     int index = 0;
     Generador_Repore();
     Capa* clone(Nodo_Capa* tmp);
-    void linealizacion_filas(Nodo_Capa* tmp);
-    void linealizacion_columnas(Nodo_Capa* tmp);
+    void linealizacion_filas(Nodo_Capa* tmp, Capa* capa_aux);
+    void linealizacion_columnas(Nodo_Capa* tmp,Capa* capa_aux);
     void imported_image_report(Nodo_ABB* tmp);
     void recorrer_arbol_imagen(Nodo_ABB* tmp);
     void recorrer_in_order(Nodo_ABB* tmp);
@@ -28,7 +28,7 @@ public:
     void recorrer_post_order(Nodo_ABB* tmp);
     void transversal_report(Arbol_ABB* abb, int recorrido);
     void all_filter_report(Lista_Filtro* list);
-    void generar_capa(Nodo_Capa* tmp);
+    void generar_capa(Nodo_Capa* tmp,Capa* capa_aux);
     template <typename T>
     string to_string(T n) {
         ostringstream os;

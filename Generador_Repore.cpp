@@ -35,13 +35,15 @@ Capa* Generador_Repore::clone(Nodo_Capa* tmp) {
     return capa;
 }
 
-void Generador_Repore::linealizacion_filas(Nodo_Capa* tmp) {
+void Generador_Repore::linealizacion_filas(Nodo_Capa* tmp, Capa* capa_aux) {
     Capa* capa = new Capa("clon");
     capa = clone(tmp);
     ofstream file;
     file.open("linealizacion_filas.dot");
-    file << "digraph Grafica{\nrankdir=LR;" << endl;
+    file << "digraph Grafica{bgcolor=deepskyblue;\nrankdir=LR;\n" << endl;
     file << "node[shape=box]" << endl;
+    file << "label = \"Linealizacion por filas de la capa: " << capa_aux->nombre << " \";" << endl;
+
     file << "Cabecera [with=1.5];";
 
     Nodo_Capa * aux = capa->cabecera;
@@ -78,12 +80,14 @@ void Generador_Repore::linealizacion_filas(Nodo_Capa* tmp) {
 
 }
 
-void Generador_Repore::linealizacion_columnas(Nodo_Capa* tmp) {
+void Generador_Repore::linealizacion_columnas(Nodo_Capa* tmp, Capa* capa_aux) {
     Capa* capa = new Capa("clone");
     ofstream file;
     file.open("linealizacion_columnas.dot");
-    file << "digraph Grafica{\nrankdir=LR;" << endl;
+    file << "digraph Grafica{bgcolor=deepskyblue;\nrankdir=LR;" << endl;
     file << "node[shape=box]" << endl;
+    file << "label = \"Linealizacion por columnas de la capa: " << capa_aux->nombre << " \";" << endl;
+
     file << "Cabecera [with=1.5];";
 
 
@@ -137,23 +141,27 @@ void Generador_Repore::recorrer_arbol_imagen(Nodo_ABB* tmp) {
 
 void Generador_Repore::imported_image_report(Nodo_ABB* tmp) {
     ofstream file;
-    file.open("im_img_rep.dot");
-    texto = "digraph g{\n";
+    file.open("Arbol_Imagenes.dot");
+    texto = "digraph g{bgcolor=deepskyblue;\n";
+    texto = texto + "label = \"ARBOL DE IMAGENES \";\n";
+
     texto = texto + "node [shape = record, heigth=.1];\n";
     recorrer_arbol_imagen(tmp);
     file << texto << endl;
     file << "}" << endl;
-    system("dot -Tpng im_img_rep.dot -o im_img_rep.png");
-    string titulo = "im_img_rep.png";
+    system("dot -Tpng Arbol_Imagenes.dot -o Arbol_Imagenes.png");
+    string titulo = "Arbol_Imagenes.png";
     ShellExecute(NULL, "open", titulo.c_str(), NULL, NULL, SW_SHOWNORMAL);
 }
 
-void Generador_Repore::generar_capa(Nodo_Capa* tmp) {
+void Generador_Repore::generar_capa(Nodo_Capa* tmp,Capa* capa_aux) {
     ofstream file;
     Capa* capa = new Capa("report");
 
-    file.open("ca.dot");
-    file << "digraph Grafica{" << endl;
+    file.open("Matriz_Dispersa.dot");
+    file << "digraph Grafica{bgcolor=deepskyblue;" << endl;
+    file << "label = \"Matriz dispersa de la capa: " << capa_aux->nombre << " \";" << endl;
+
     file << "node[shape=box]" << endl;
     file << "Cabecera [with=1.5, style=filled, fillcolor=green, group= 1];";
 
@@ -247,25 +255,25 @@ void Generador_Repore::generar_capa(Nodo_Capa* tmp) {
     file << "Cabecera->c1" << endl;
     file << "}" << endl;
 
-    system("dot -Tpng ca.dot -o ca.png");
-    string title = "ca.png";
+    system("dot -Tpng Matriz_Dispersa.dot -o Matriz_Dispersa.png");
+    string title = "Matriz_Dispersa.png";
     ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
 }
 
 void Generador_Repore::transversal_report(Arbol_ABB* abb, int recorrido) {
     ofstream file;
     file.open("transversal_report.dot");
-    file << "digraph Grafica{\nrankdir=LR;" << endl;
+    file << "digraph Grafica{bgcolor=deepskyblue;\nrankdir=LR;" << endl;
     file << "node[shape=box]" << endl;
 
     if (recorrido == 1) {
-        file << " INORDER [with=1.5];";
+        file << "label = \"Transversal report In-order \";" << endl;
         recorrer_in_order(abb->raiz);
     } else if (recorrido == 2) {
-        file << " PREORDER [with=1.5];";
+        file << "label = \"Transversal report Pre-order \";" << endl;
         recorrer_pre_order(abb->raiz);
     } else if (recorrido == 3) {
-        file << " POSTORDER [with=1.5];";
+        file << "label = \"Transversal report Post-order \";" << endl;
         recorrer_post_order(abb->raiz);
     }
     file << texto << endl;
@@ -318,31 +326,33 @@ void Generador_Repore::recorrer_post_order(Nodo_ABB* tmp) {
     }
 }
 
-void Generador_Repore::all_filter_report(Lista_Filtro* list){
-    
+void Generador_Repore::all_filter_report(Lista_Filtro* list) {
+
     ofstream file;
     file.open("all_filter_report.dot");
-    file << "digraph Grafica{\nrankdir=LR;" << endl;
+    file << "digraph Grafica{bgcolor=deepskyblue;\nrankdir=LR;" << endl;
+    file << "label = \"Lista Circular Doblemente Enlazada de los filtros aplicados \";" << endl;
+
     file << "node[shape=box]" << endl;
     file << "ALLFILTERS [with=1.5];";
 
     Nodo_Filtro* aux = list->cabeza;
-    
+
     int i = 0;
-    do{
-        file << "filter" << i << "[label = \""+ aux->capa+"-"+ aux->filtro+ "\"]\n" << endl;
-        if(i < list->size - 1){
+    do {
+        file << "filter" << i << "[label = \"" + aux->capa + "-" + aux->filtro + "\"]\n" << endl;
+        if (i < list->size - 1) {
             file << "filter" << i << "->" << "filter" << i + 1 << endl;
         }
-        if(i > 0){
+        if (i > 0) {
             file << "filter" << i - 1 << "->" << "filter" << i << endl;
         }
         i++;
         aux = aux->sig;
-    }while(aux != list->cabeza);
-    
-    file << "filter0 -> filter"<<i-1<< endl;
-    file <<"filter"<<i-1<< " -> filter0" << endl;
+    } while (aux != list->cabeza);
+
+    file << "filter0 -> filter" << i - 1 << endl;
+    file << "filter" << i - 1 << " -> filter0" << endl;
     file << "}" << endl;
 
 
@@ -351,5 +361,5 @@ void Generador_Repore::all_filter_report(Lista_Filtro* list){
     system("dot -Tpng all_filter_report.dot -o all_filter_report.png");
     string title = "all_filter_report.png";
     ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
-    
+
 }

@@ -1,0 +1,15 @@
+digraph Grafica{bgcolor=deepskyblue;
+rankdir=LR;
+node[shape=box]
+label = "Linealizacion por columnas de la capa: ne2.csv ";
+Cabecera [with=1.5];Cabecera->f0
+f0[label="(1,1) 145,14,50"]
+f0->f1
+f1[label="(1,4) 145,14,50"]
+f1->f2
+f1->f2
+f1->f2
+f2[label="(4,1) 145,14,50"]
+f2->f3
+f3[label="(4,4) 145,14,50"]
+}
