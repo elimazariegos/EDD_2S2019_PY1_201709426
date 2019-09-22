@@ -174,43 +174,44 @@ void menu_edicion_manual() {
     if (opcion == 1) {
         modificacion(imagen_seleccionada);
     } else if (opcion == 2) {
-        Nodo_Filtro* aux = lista_fitros->cabeza;
-        int i = 1;
-        do {
+        if (lista_fitros != 0) {
+            Nodo_Filtro* aux = lista_fitros->cabeza;
+            int i = 1;
+            do {
 
-            if (aux->filtro != "mosaico" and aux->filtro != "collage") {
-                if (aux->capa == "") {
-                    cout << "[" << i << "]" << " Imagen Completa" << "-" << aux->filtro << endl;
+                if (aux->filtro != "mosaico" and aux->filtro != "collage") {
+                    if (aux->capa == "") {
+                        cout << "[" << i << "]" << " Imagen Completa" << "-" << aux->filtro << endl;
 
-                } else {
-                    cout << "[" << i << "] " << aux->capa << "-" << aux->filtro << endl;
+                    } else {
+                        cout << "[" << i << "] " << aux->capa << "-" << aux->filtro << endl;
+
+                    }
 
                 }
 
-            }
+                aux = aux->sig;
+                if (i == lista_fitros->size) {
+                    break;
+                }
+                i++;
 
-            aux = aux->sig;
-            if (i == lista_fitros->size) {
-                break;
-            }
-            i++;
+            } while (aux != lista_fitros->cabeza);
 
-        } while (aux != lista_fitros->cabeza);
-
-        cout << "[************************************************]" << endl;
-        cout << "Seleccione una opcion" << endl;
-        cout << "-->";
-        cin>>op;
-        int entrada = es_entero(op);
-        if (entrada > 0) {
-            Nodo_Filtro* tmp_fl = lista_fitros->buscar(entrada - 1);
-            if (tmp_fl != 0) {
-                modificacion(tmp_fl->cub);
-            } else {
-                cout << "opcion incorrecta" << endl;
+            cout << "[************************************************]" << endl;
+            cout << "Seleccione una opcion" << endl;
+            cout << "-->";
+            cin>>op;
+            int entrada = es_entero(op);
+            if (entrada > 0) {
+                Nodo_Filtro* tmp_fl = lista_fitros->buscar(entrada - 1);
+                if (tmp_fl != 0) {
+                    modificacion(tmp_fl->cub);
+                } else {
+                    cout << "opcion incorrecta" << endl;
+                }
             }
         }
-
 
     }
 }

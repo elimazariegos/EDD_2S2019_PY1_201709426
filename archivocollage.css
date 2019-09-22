@@ -9,13 +9,13 @@ align-items: center;
 width:480px;
 height:480px;
 }.canvasM{
-width:120px;
-height:120px;
+width:32px;
+height:32px;
 }
 .pixelM{
 float: left;
-width:7.5px;
-height:7.5px;
+width:2px;
+height:2px;
 }
 .pixelM:nth-child(5){
 background: rgb(255,0,0);
